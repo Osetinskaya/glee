@@ -1,0 +1,17 @@
+body {
+    color: #a3bbc8;
+    font-size: 16px;
+    line-height: 2.5;
+    @extend %dmsans-500;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.link__img {
+    width: 20px;
+    height: 20px;
+}

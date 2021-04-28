@@ -2,4 +2,63 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+.header {
+    padding: 55px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+    &__link {
+        color: $default;
+        font-size: 15px;
+        line-height: 1;
+        position: relative;
+        transition: all 0.3s;
+        &:hover {
+            color: $accent;
+            border-bottom: 1px solid $accent;
+            padding-bottom: 5px;
+        }
+        &:active::after {
+            content: '+';
+            position: relative;
+            margin-left: 5px;
+            color: inherit
+        }
+    }
+}
+
+.user-nav {
+    display: flex;
+    &__link {
+        position: relative;
+        @extend %rubik-500;
+    }
+    &__link:not(:last-child) {
+        margin-right: 20px;
+    }
+    &__num {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-repeat: 50%;
+        background-color: #fff;
+        top: -10px;
+        right: -10px;
+        font-size: 9px;
+        line-height: 15px;
+        text-align: center;
+    }
+}
+
 @import 'media';
