@@ -1,8 +1,9 @@
 $accent:#324e5b;
 $default:#436372;
-%dmsans-700 {
-    font-family: 'DMSans-Bold', sans-serif;
-    font-weight: 700;
+$bg:#7b7b7b;
+%dmsans-400 {
+    font-family: 'DMSans-Regular', sans-serif;
+    font-weight: 400;
 }
 
 %dmsans-500 {
@@ -10,17 +11,22 @@ $default:#436372;
     font-weight: 500;
 }
 
-%poppins-700 {
-    font-family: 'Poppins-Bold', sans-serif;
+%dmsans-700 {
+    font-family: 'DMSans-Bold', sans-serif;
     font-weight: 700;
 }
 
-%rubik-500 {
-    font-family: 'Rubik-Medium', sans-serif;
+%poppins-700 {
+    font-family: 'Poppins-Bold', sans-serif;
     font-weight: 700;
 }
 
 %rubik-400 {
     font-family: 'Rubik-Regular', sans-serif;
     font-weight: 400;
+}
+
+%rubik-500 {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 700;
 }
