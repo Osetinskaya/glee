@@ -49,6 +49,7 @@
     &__link {
         position: relative;
         @extend %rubik-500;
+        transition: background-color 0.5s;
     }
     &__link:not(:last-child) {
         margin-right: 20px;
@@ -64,11 +65,11 @@
         }
     }
     &__link--like {
-        margin-right: 0 !important;
         border-top-left-radius: 43%;
         border-bottom-left-radius: 43%;
+        margin-right: 0 !important;
         background-color: #fcd7b6;
-        position: relative;
+        transition: background-color 0.5s;
         &:hover {
             background-color: #fcc391;
         }
@@ -76,11 +77,11 @@
             background-color: #f5a45e;
         }
         &::after {
-            content: "";
-            width: 1px;
-            height: 30px;
-            top: 10px;
+            content: '';
+            width: 2px;
+            height: 35px;
             right: 0;
+            top: 5px;
             background-color: #fde7d3;
             z-index: 10;
             position: absolute;
@@ -90,6 +91,7 @@
         border-top-right-radius: 43%;
         border-bottom-right-radius: 43%;
         background-color: #fcd7b6;
+        transition: background-color 0.5s;
         &:hover {
             background-color: #fcc391;
         }
@@ -97,16 +99,7 @@
             background-color: #f5a45e;
         }
     }
-    &__img {
-        height: 48px;
-        padding: 15px;
-    }
-    &__img--like,
-    &__img--card {
-        padding-left: 35px;
-        padding-right: 25px;
-    }
-    &__img--grid {
+    &__link--grid {
         background-color: #a3bbc8;
         border-radius: 47%;
         &:hover {
@@ -114,6 +107,15 @@
         }
         &:active {
             background-color: #51819c;
+        }
+    }
+    &__img {
+        height: 48px;
+        padding: 15px;
+        &--like,
+        &--card {
+            padding-left: 35px;
+            padding-right: 25px;
         }
     }
     &__num {
@@ -170,6 +172,13 @@
         border: none;
         outline: transparent;
         position: relative;
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: #788c97;
+        }
+        &:active {
+            background-color: #506068;
+        }
     }
     &__link::after {
         content: url(../images/slider/arrow.png);
@@ -344,8 +353,8 @@
     &__cart {
         display: flex;
         position: absolute;
-        bottom: 180px;
-        left: 85px;
+        bottom: 190px;
+        left: 65px;
         opacity: 0;
     }
     &__inner:hover &__cart {
@@ -361,11 +370,32 @@
         border: 0;
         outline: none;
         cursor: pointer;
-        &--search:hover {
+        transition: background-image 0.5s, background-color 0.5s;
+        &--zoom:hover {
+            background-image: url(../images/icon/products__zoom-hover.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
             background-color: #a3bac7;
+            z-index: 10;
         }
         &--card:hover {
+            background-image: url(../images/icon/products__card-hover.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
             background-color: #a3bac7;
+            z-index: 10;
+        }
+        &--like:hover {
+            background-image: url(../images/icon/products__like-hover.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #a3bac7;
+            z-index: 10;
+        }
+        &--zoom:active,
+        &--card:active,
+        &--like:active {
+            background-color: #6e818b;
         }
     }
     &__image {
@@ -385,7 +415,7 @@
             max-width: 215px;
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
         }
         &__logo {
             margin-bottom: 30px;
@@ -396,6 +426,12 @@
         }
         &__item {
             margin-bottom: 20px;
+            &:hover {
+                color: #646161;
+            }
+            &:active {
+                color: #333333;
+            }
         }
         &__title {
             @extend %dmsans-700;
@@ -445,10 +481,12 @@
         display: flex;
         justify-content: space-between;
         color: #7b7b7b;
+        transition: color 0.5s;
         &__nav {
             display: flex;
         }
         &__navigation {
+            cursor: pointer;
             position: relative;
             &:not(:last-child) {
                 margin-right: 30px;
@@ -459,6 +497,12 @@
                 border-left: 2px solid #7b7b7b;
                 right: -10px;
                 margin-left: 15px;
+            }
+            &:hover {
+                color: #646161;
+            }
+            &:active {
+                color: #333333;
             }
         }
     }

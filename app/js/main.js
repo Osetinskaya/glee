@@ -2,6 +2,8 @@ $(function() {
     $('.hero__inner').slick({
         dots: true,
         arrows: false,
-        fade: true
+        fade: true,
+        autoplay: true,
+        fadetime: 700
     });
 });
