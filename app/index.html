@@ -59,34 +59,38 @@
     </header>
     <main>
         <section class="hero">
+            <h1 class="sr-only">Слайдшоу с краткой информацией</h1>
             <div class="container">
                 <div class="hero__inner">
                     <div class="hero__item">
                         <div class="hero__content">
-                            <h1 class="hero__title">SMART AND TRENDY</h1>
+                            <h2 class="hero__title">SMART AND TRENDY</h2>
                             <p class="hero__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
                             <button class="hero__btn">
                                 <a class="hero__link" href="#">Shop Now</a>
+                                <span class="sr-only">Купить сейчас</span>
                             </button>
                         </div>
                         <img class="hero__img" src="images/slider/1.png" alt="divan">
                     </div>
                     <div class="hero__item">
                         <div class="hero__content">
-                            <h1 class="hero__title">SMART AND TRENDY</h1>
+                            <h2 class="hero__title">SMART AND TRENDY</h2>
                             <p class="hero__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
                             <button class="hero__btn">
                                 <a class="hero__link" href="#">Shop Now</a>
+                                <span class="sr-only">Купить сейчас</span>
                             </button>
                         </div>
                         <img class="hero__img" src="images/slider/1.png" alt="divan">
                     </div>
                     <div class="hero__item">
                         <div class="hero__content">
-                            <h1 class="hero__title">SMART AND TRENDY</h1>
+                            <h2 class="hero__title">SMART AND TRENDY</h2>
                             <p class="hero__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
                             <button class="hero__btn">
                                 <a class="hero__link" href="#">Shop Now</a>
+                                <span class="sr-only">Купить сейчас</span>
                             </button>
                         </div>
                         <img class="hero__img" src="images/slider/1.png" alt="divan">
@@ -96,11 +100,12 @@
         </section>
 
         <section class="service">
+            <h1 class="sr-only">Услуги, которые предоставляем</h1>
             <div class="container">
                 <ul class="service__list">
                     <li class="service__items">
                         <div class="service__content service__content--support">
-                            <h1 class="service__title">Support 24/7.</h1>
+                            <h2 class="service__title">Support 24/7.</h2>
                             <div class="service__text">
                                 <p>Contact us 24 hours a day, 7 days a week.</p>
                             </div>
@@ -108,7 +113,7 @@
                     </li>
                     <li class="service__items">
                         <div class="service__content service__content--delivery">
-                            <h1 class="service__title">Delivery.</h1>
+                            <h2 class="service__title">Delivery.</h2>
                             <div class="service__text">
                                 <p>Free shipping on all US order.</p>
                             </div>
@@ -116,7 +121,7 @@
                     </li>
                     <li class="service__items">
                         <div class="service__content service__content--payment">
-                            <h1 class="service__title">100% Payment secure.</h1>
+                            <h2 class="service__title">100% Payment secure.</h2>
                             <div class="service__text">
                                 <p>We ensure secure payment with PEV.</p>
                             </div>
@@ -127,9 +132,10 @@
         </section>
 
         <section class="products">
+            <h1 class="sr-only">Популярные товары на этой неделе</h1>
             <div class="container">
                 <div class="products__head">
-                    <h1 class="products__title">Products of the week</h1>
+                    <h2 class="products__title">Products of the week</h2>
                     <ul class="products__list">
                         <li class="products__item">All</li>
                         <li class="products__item">Furnitures</li>
@@ -148,81 +154,206 @@
                             </div>
                         </div>
                         <div class="products__cart">
-                            <button class="products__btn products__btn--search" href="#">
-                                <img class="products__image" src="images/icon/products__search.svg" alt="search__img">
-                            </button>
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
 
                             <button class="products__btn products__btn--card" href="#">
-                                <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                            </button>
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
 
-                            <button class="products__btn" href="#">
-                                <img class="products__image products__image--search" src="images/icon/products__like.svg" alt="search__img">
-                            </button>
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
                         </div>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/2.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                    </li>
+
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/2.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">Wooden chair</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/3.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/3.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">White chair</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/4.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/4.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">Retro table</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/5.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/5.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">Wooden radio</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/6.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/6.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">Wooden chair</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/7.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/7.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">White chair</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
-                        <li class="products__inner">
-                            <div class="products__body">
-                                <img class="products__img" src="images/products/8.png" alt="armchair">
-                                <div class="products__text">
-                                    <div class="products__name">Wooden radio</div>
-                                    <div class="products__cost">29.00</div>
-                                </div>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+                    <li class="products__inner">
+                        <div class="products__body">
+                            <img class="products__img" src="images/products/8.png" alt="armchair">
+                            <div class="products__text">
+                                <div class="products__name">Retro table</div>
+                                <div class="products__cost">29.00</div>
                             </div>
-                        </li>
+                        </div>
+                        <div class="products__cart">
+                            <button class="products__btn products__btn--zoom" href="#">
+                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
+                                    <span class="sr-only"> Использовать лупу</span>
+                                </button>
+
+                            <button class="products__btn products__btn--card" href="#">
+                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в корзину</span>
+                                </button>
+
+                            <button class="products__btn products__btn--like" href="#">
+                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
+                                    <span class="sr-only">Добавить в избранное</span>
+                                </button>
+                        </div>
+                    </li>
+
+
+
+
+
+
+
                 </ul>
             </div>
         </section>
@@ -231,9 +362,10 @@
     </main>
 
 
-    <!--  <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-top">
+                <h1 class="sr-only">Контактная информация.</h1>
                 <div class="footer-top__blok footer-top__contact">
                     <a class="logo" href="#">
                         <img class="logo__img footer-top__logo" src="images/logo.png" alt="logo">
@@ -292,8 +424,10 @@
                         Subscribe by our newsletter and get update protidin.
                     </p>
                     <form action="#" class="footer__form">
-                        <input class="footer-top__input" type="email" placeholder="Email address" required>
+                        <label for="address" class="footer-top__label"></label>
+                        <input class="footer-top__input" id="address" type="email" placeholder="Email address" name="your email address" required>
                         <button class="footer-top__btn" type="submit">Subscribe</button>
+                        <span class="sr-only">отправить email</span>
                     </form>
                 </div>
             </div>
@@ -310,7 +444,7 @@
         </div>
 
 
-    </footer> -->
+    </footer>
 
 
 
