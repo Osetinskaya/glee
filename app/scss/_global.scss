@@ -1,3 +1,16 @@
+body {
+    color: #a3bbc8;
+    font-size: 16px;
+    line-height: 1.7;
+    @extend %dmsans-400;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -7,22 +20,4 @@
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-}
-
-body {
-    color: #a3bbc8;
-    font-size: 16px;
-    line-height: 1.7;
-    @extend %dmsans-500;
-}
-
-.container {
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.link__img {
-    width: 20px;
-    height: 20px;
 }

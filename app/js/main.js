@@ -6,4 +6,6 @@ $(function() {
         autoplay: true,
         fadetime: 700
     });
+
+    var mixit = mixitup('.product__content');
 });

@@ -1,33 +1,90 @@
+$bg:#fff;
+
+/* ЦВЕТА HEADER */
+
 $accent:#324e5b;
 $default:#436372;
-$bg:#7b7b7b;
+$link__focus:#c7c7c7;
+$search__bg:#edf1f4;
+$search__hover:#ced4da;
+$search__active:#a4afb8;
+$favorites__bg:#fcd7b6;
+$favorites__hover:#fcc391;
+$favorites__active:#f5a45e;
+$grid__bg:#a3bbc8;
+$grid__hover:#79a9c4;
+$grid__active:#51819c;
+
+/* ЦВЕТА HERO */
+
 $title:#243f4d;
+$text:#4f6b77;
+$link:#a3bbc8;
+$inner:#fcd7b6;
+$link__hover:#788c97;
+$link__active:#506068;
+$button__hover:#bbbbbb;
+
+/* ЦВЕТА SERVICE */
+
+$list:#fef7f0;
+$item:#e8e4df;
+$service__title:#414141;
+$service__text:#585858;
+
+/* ЦВЕТА PRODUCTS */
+
+$products__item:#000;
+
+/* ЦВЕТА PRODUCT */
+
+$inner__shadow:#f8f8f8;
+$tool:#a3bbc8;
+$item__hover:#a3bac7;
+$item__active:#6e818b;
+
+/* ЦВЕТА FOOTER */
+
+$footer:#7b7b7b;
+$footer__inner:#7b7b7b;
+$footer__title:#1f2044;
+$footer__item-hover:#646161;
+$footer__item-active:#333333;
+$footer__input-hover:#f7cb9ee8;
+$footer__input-active:#f3b06de8;
+$footer__input-placeholder:#1f2044;
+$footer__btn: #a3bbc8;
+$footer__btn-hover:#6fa0bb;
+$footer__btn-active:#458db4;
+
+/* ШРИФТЫ */
+
 %dmsans-400 {
-    font-family: 'DMSans-Regular', sans-serif;
+    font-family: 'DMSans', sans-serif;
     font-weight: 400;
 }
 
 %dmsans-500 {
-    font-family: 'DMSans-Medium', sans-serif;
+    font-family: 'DMSans', sans-serif;
     font-weight: 500;
 }
 
 %dmsans-700 {
-    font-family: 'DMSans-Bold', sans-serif;
+    font-family: 'DMSans', sans-serif;
     font-weight: 700;
 }
 
 %poppins-700 {
-    font-family: 'Poppins-Bold', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
 
 %rubik-400 {
-    font-family: 'Rubik-Regular', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
 }
 
 %rubik-500 {
-    font-family: 'Rubik-Medium', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Glee</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -12,116 +14,119 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a class="logo" href="#">
-                    <img class="logo__img" src="images/logo.png" alt="logo">
-                </a>
                 <nav class="menu">
-                    <div class="menu__list">
-                        <li class="menu__list-item">
-                            <a class="menu__list-link menu__list-link--active" href="#">Home</a>
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/logo.png" alt="logo">
+                    </a>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Home</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">About</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">About</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Services</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Services</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Pages</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Pages</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">News</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">News</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Contact</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Contact</a>
                         </li>
+                    </ul>
+                    <div class="user-nav">
+                        <button class="user-nav__link user-nav__link--search" href="#">
+                            <span class="sr-only">Search by page</span>
+                    </button>
+                        <button class="user-nav__link user-nav__link--like" href="#">
+                            <span class="sr-only">Favorite products</span>
+                        <span class="user-nav__num">0</span>
+                    </button>
+                        <button class="user-nav__link user-nav__link--card" href="#">
+                            <span class="sr-only">basket of goods</span>
+                        <span class="user-nav__num">0</span>
+                    </button>
+                        <button class="user-nav__link user-nav__link--grid" href="#">
+                            <span class="sr-only">Available applications</span>
+                    </button>
                     </div>
                 </nav>
-                <div class="user-nav">
-                    <a class="user-nav__link user-nav__link--search" href="#">
-                        <img class="user-nav__img user-nav__img--search" src="images/icon/search.svg" alt="search__img">
-                    </a>
-                    <a class="user-nav__link user-nav__link--like" href="#">
-                        <img class="user-nav__img user-nav__img--like" src="images/icon/like.svg" alt="like__img">
-                        <span class="user-nav__num">0</span>
-                    </a>
-                    <a class="user-nav__link user-nav__link--card" href="#">
-                        <img class="user-nav__img user-nav__img--card" src="images/icon/card.svg" alt="card__img">
-                        <span class="user-nav__num">0</span>
-                    </a>
-                    <a class="user-nav__link user-nav__link--grid" href="#">
-                        <img class="user-nav__img user-nav__img--grid" src="images/icon/grid.svg" alt="grid__img">
-
-                    </a>
-                </div>
             </div>
         </div>
     </header>
     <main>
+        <h1 class="sr-only">Information about the company</h1>
         <section class="hero">
-            <h1 class="sr-only">Слайдшоу с краткой информацией</h1>
+            <h2 class="sr-only">Promo company</h2>
             <div class="container">
-                <div class="hero__inner">
-                    <div class="hero__item">
+                <ul class="hero__inner">
+                    <li class="hero__item">
                         <div class="hero__content">
-                            <h2 class="hero__title">SMART AND TRENDY</h2>
-                            <p class="hero__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-                            <button class="hero__btn">
-                                <a class="hero__link" href="#">Shop Now</a>
-                                <span class="sr-only">Купить сейчас</span>
-                            </button>
+                            <h3 class="hero__title">Smart and trendy</h3>
+                            <div class="hero__text">
+                                <p class="hero__info">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            </div>
+                            <a class="hero__link" href="#">Shop Now
+                                <span class="sr-only">Shop Now</span>
+                            </a>
                         </div>
-                        <img class="hero__img" src="images/slider/1.png" alt="divan">
-                    </div>
-                    <div class="hero__item">
+                        <img class="hero__img" src="images/slider/1.png" alt="sofa">
+                    </li>
+                    <li class="hero__item">
                         <div class="hero__content">
-                            <h2 class="hero__title">SMART AND TRENDY</h2>
-                            <p class="hero__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-                            <button class="hero__btn">
-                                <a class="hero__link" href="#">Shop Now</a>
-                                <span class="sr-only">Купить сейчас</span>
-                            </button>
+                            <h3 class="hero__title">Smart and trendy</h3>
+                            <div class="hero__text">
+                                <p class="hero__info">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            </div>
+                            <a class="hero__link" href="#">Shop Now
+                                 <span class="sr-only">Shop Now</span>
+                            </a>
                         </div>
-                        <img class="hero__img" src="images/slider/1.png" alt="divan">
-                    </div>
-                    <div class="hero__item">
+                        <img class="hero__img" src="images/slider/1.png" alt="sofa">
+                    </li>
+                    <li class="hero__item">
                         <div class="hero__content">
-                            <h2 class="hero__title">SMART AND TRENDY</h2>
-                            <p class="hero__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-                            <button class="hero__btn">
-                                <a class="hero__link" href="#">Shop Now</a>
-                                <span class="sr-only">Купить сейчас</span>
-                            </button>
+                            <h3 class="hero__title">Smart and trendy</h3>
+                            <div class="hero__text">
+                                <p class="hero__info">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            </div>
+                            <a class="hero__link" href="#">Shop Now
+                                <span class="sr-only">Shop Now</span>
+                            </a>
                         </div>
-                        <img class="hero__img" src="images/slider/1.png" alt="divan">
-                    </div>
-                </div>
+                        <img class="hero__img" src="images/slider/1.png" alt="sofa">
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section class="service">
-            <h1 class="sr-only">Услуги, которые предоставляем</h1>
+            <h2 class="sr-only">Services we provide</h2>
             <div class="container">
                 <ul class="service__list">
-                    <li class="service__items">
+                    <li class="service__item">
                         <div class="service__content service__content--support">
-                            <h2 class="service__title">Support 24/7.</h2>
+                            <h3 class=" service__title">Support 24/7.</h3>
                             <div class="service__text">
                                 <p>Contact us 24 hours a day, 7 days a week.</p>
                             </div>
                         </div>
                     </li>
-                    <li class="service__items">
+                    <li class="service__item">
                         <div class="service__content service__content--delivery">
-                            <h2 class="service__title">Delivery.</h2>
+                            <h3 class="service__title">Delivery.</h3>
                             <div class="service__text">
                                 <p>Free shipping on all US order.</p>
                             </div>
                         </div>
                     </li>
-                    <li class="service__items">
+                    <li class="service__item service__item">
                         <div class="service__content service__content--payment">
-                            <h2 class="service__title">100% Payment secure.</h2>
+                            <h3 class="service__title">100% Payment secure.</h3>
                             <div class="service__text">
                                 <p>We ensure secure payment with PEV.</p>
                             </div>
@@ -132,229 +137,334 @@
         </section>
 
         <section class="products">
-            <h1 class="sr-only">Популярные товары на этой неделе</h1>
             <div class="container">
-                <div class="products__head">
-                    <h2 class="products__title">Products of the week</h2>
-                    <ul class="products__list">
-                        <li class="products__item">All</li>
-                        <li class="products__item">Furnitures</li>
-                        <li class="products__item">Chairs</li>
-                        <li class="products__item">Lighting</li>
-                        <li class="products__item">Deco</li>
-                    </ul>
-                </div>
-                <ul class="products__content">
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/1.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">Wooden radio</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/2.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">Wooden chair</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/3.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">White chair</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/4.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">Retro table</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/5.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">Wooden radio</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/6.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">Wooden chair</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/7.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">White chair</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-                    <li class="products__inner">
-                        <div class="products__body">
-                            <img class="products__img" src="images/products/8.png" alt="armchair">
-                            <div class="products__text">
-                                <div class="products__name">Retro table</div>
-                                <div class="products__cost">29.00</div>
-                            </div>
-                        </div>
-                        <div class="products__cart">
-                            <button class="products__btn products__btn--zoom" href="#">
-                                    <img class="products__image" src="images/icon/products__zoom.svg" alt="zoom__img">
-                                    <span class="sr-only"> Использовать лупу</span>
-                                </button>
-
-                            <button class="products__btn products__btn--card" href="#">
-                                    <img class="products__image" src="images/icon/products__card.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в корзину</span>
-                                </button>
-
-                            <button class="products__btn products__btn--like" href="#">
-                                    <img class="products__image products__image" src="images/icon/products__like.svg" alt="search__img">
-                                    <span class="sr-only">Добавить в избранное</span>
-                                </button>
-                        </div>
-                    </li>
-
-
-
-
-
-
-
+                <h2 class="products__title">Products of the week</h2>
+                <ul class="products__list">
+                    <li class="products__item" data-filter="all">All</li>
+                    <li class="products__item" data-filter=".category-furnitures">Furnitures</li>
+                    <li class="products__item" data-filter=".category-chairs">Chairs</li>
+                    <li class="products__item" data-filter=".category-lighting">Lighting</li>
+                    <li class="products__item" data-filter=".category-deco">Deco</li>
                 </ul>
+                <article class="product-card">
+                    <ul class="product__content">
+                        <li class="product__inner mix category-furnitures">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/1.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" src="images/products/1.png" alt="armchair">
+                                <div class="product__text">
+                                    <h3 class="product__name">Wooden radio</h3>
+                                    <div class="product__cost">29.00 <span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+
+                                            <path id="forma_1" data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="product__inner mix category-chairs">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/2.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/2.png" alt="chair">
+                                <div class="product__text">
+                                    <h3 class="product__name">Wooden radio</h3>
+                                    <div class="product__cost">29.00 <span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="product__inner mix category-chairs">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/3.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/3.png" alt="armchair">
+                                <div class="product__text">
+                                    <h3 class="product__name">White chairs</h3>
+                                    <div class="product__cost">29.00 <span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="product__inner mix category-lighting">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/4.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/4.png" alt="armchair">
+                                <div class="product__text">
+                                    <h3 class="product__name">Retro table</h3>
+                                    <div class="product__cost">29.00 <span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="product__inner mix category-deco">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/5.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/5.png" alt="armchair">
+                                <div class="product__text">
+                                    <h3 class="product__name">Wooden radio</h3>
+                                    <div class="product__cost">29.00 <span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="product__inner mix category-chairs">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/1.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/6.png" alt="chair">
+                                <div class="product__text">
+                                    <h3 class="product__name">Wooden radio</h3>
+                                    <div class="product__cost">29.00 <span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="product__inner mix category-chairs">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/7.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/7.png" alt="armchair">
+                                <div class="product__text">
+                                    <h3 class="product__name">White chairs</h3>
+                                    <div class="product__cost">29.00<span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="product__inner mix category-lighting">
+                            <div class="product__body">
+                                <a class="product__body-after" data-fancybox="images" data-width="2048" data-height="1365" href="images/products/8.png">
+                                    <span class="sr-only">Увеличить изображение</span>
+                                </a>
+                                <img class="product__img" data-fancybox="images" data-width="210" data-height="200" src="images/products/8.png" alt="armchair">
+                                <div class="product__text">
+                                    <h3 class="product__name">Retro table</h3>
+                                    <div class="product__cost">29.00<span>$</span></div>
+                                </div>
+                            </div>
+                            <ul class="product__tool">
+                                <li class="product__item product__item--more">
+                                    <a class="product__link" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                                            <path data-name="Forma 1" class="cls-1" d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z" transform="translate(-740 -1563)"/>
+                                          </svg>
+                                        <span class="sr-only">See more</span>
+                                    </a>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--card" href="# ">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="18.938" height="16.969" viewbox="0 0 18.938 16.969">
+                                            <path class="cls-1" d="M122.526,37.978a2.074,2.074,0,0,1,0-4.147h0.006A2.074,2.074,0,0,1,122.526,37.978Zm0.007-2.963h0a0.883,0.883,0,1,0,.628.258,0.886,0.886,0,0,0-.628-0.258Zm8.385,2.963a2.074,2.074,0,0,1,0-4.147h0a1.937,1.937,0,0,1,1.468.6,2.077,2.077,0,0,1-.667,3.383A2.1,2.1,0,0,1,130.918,37.978Zm0.006-2.963h0a0.979,0.979,0,0,0-.823.548,0.888,0.888,0,1,0,1.449-.291A0.9,0.9,0,0,0,130.924,35.015Zm-11.279.164a0.584,0.584,0,0,1-.25-0.056,0.592,0.592,0,0,1-.286-0.787,3.681,3.681,0,0,1,3.054-2.151l-1.055-5.391a0.593,0.593,0,1,1,1.163-.227l1.091,5.578h9.423l1.807-6.771h-13.3a4.354,4.354,0,0,1-4.283-3.693,0.592,0.592,0,1,1,1.171-.175,3.165,3.165,0,0,0,3.115,2.682h14.07a0.593,0.593,0,0,1,.573.745l-2.123,7.956a0.594,0.594,0,0,1-.573.44H122.885a0.044,0.044,0,0,0-.023,0,2.656,2.656,0,0,0-2.68,1.51A0.593,0.593,0,0,1,119.645,35.178Z" transform="translate(-117 -21)"/>
+                                          </svg>
+                                        <span class="sr-only ">Add to Shopping Cart</span>
+                                    </button>
+                                </li>
+                                <li class="product__item">
+                                    <button class="product__btn product__btn--like" href="#">
+                                        <svg class="product__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewbox="0 0 22 18">
+                                            <path data-name="Forma 1" class="cls-1" d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z" transform="translate(-861 -1564)"/>
+                                          </svg>
+                                          
+                                        <span class="sr-only">Add to favourites</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
             </div>
         </section>
 
@@ -364,70 +474,70 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-top">
-                <h1 class="sr-only">Контактная информация.</h1>
-                <div class="footer-top__blok footer-top__contact">
-                    <a class="logo" href="#">
-                        <img class="logo__img footer-top__logo" src="images/logo.png" alt="logo">
+            <div class="footer__inner">
+                <h1 class="sr-only">Contact Information</h1>
+                <address class="footer__address">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__img footer__logo" src="images/logo.png" alt="logo">
                     </a>
-                    <a class="footer-top__address" href="#">ADDRESS: 4772 Wines Lane Houston, TX 77032</a>
-                    <a class="footer-top__tel" href="tel:8323475843">TELEPHONE: +832-347-5843 </a>
-                    <a class="footer-top__email" href="mailto:contact@Glee.com">EMAIL: contact@Glee.com</a>
-                </div>
-                <div class="footer-top__block">
-                    <ul class="footer-top__list">
-                        <li class="footer-top__item">
-                            <h2 class="footer-top__title">Services</h2>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">About us</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Return Policy</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Our Blog</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Contact Us</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Terms & Condition</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-top__block">
-                    <ul class="footer-top__list">
-                        <li class="footer-top__item">
-                            <h2 class="footer-top__title">Account</h2>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Your Account</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Checkout</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Login</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link">Register</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a href="#" class="footer-top__link"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-top__block">
-                    <h2 class="footer-top__title">newsletter</h2>
-                    <p class="footer-top__text">
+                    <a class="footer__contacts" href="# ">ADDRESS: 4772 Wines Lane Houston, TX 77032</a>
+                    <a class="footer__contacts" href="tel:8323475843">TELEPHONE: +832-347-5843 </a>
+                    <a class="footer__contacts" href="mailto:contact@Glee.com">EMAIL: contact@Glee.com</a>
+                </address>
+                <ul class="footer__nav">
+                    <li class="footer__package">
+                        <p class="footer__title">Services</p>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="# ">About us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Return Policy</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Our Blog</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Contact Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Terms & Condition</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__package">
+                        <ul class="footer__list">
+                            <p class="footer__title">Account</p>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a class="footer__link" href="#">Your Account</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a class="footer__link" href="#">Checkout</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a class="footer__link" href="#">Login</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a class="footer__link" href="#">Register</a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </li>
+
+                </ul>
+                <div class="footer__block">
+                    <p class="footer__title">newsletter</p>
+                    <p class="footer__text">
                         Subscribe by our newsletter and get update protidin.
                     </p>
                     <form action="#" class="footer__form">
-                        <label for="address" class="footer-top__label"></label>
-                        <input class="footer-top__input" id="address" type="email" placeholder="Email address" name="your email address" required>
-                        <button class="footer-top__btn" type="submit">Subscribe</button>
-                        <span class="sr-only">отправить email</span>
+                        <label for="address" class="footer__label"></label>
+                        <input class="footer__input" id="address" type="email" placeholder="Email address" name="your email address" required>
+                        <button class="footer__btn" type="submit ">Subscribe
+                            <span class="sr-only">отправить email</span>
+                        </button>
+
                     </form>
                 </div>
             </div>
@@ -437,7 +547,7 @@
                 <ul class="footer-bottom__nav">
                     <li class="footer-bottom__navigation">Home</li>
                     <li class="footer-bottom__navigation">About</li>
-                    <li class="footer-bottom__navigation"> Blog</li>
+                    <li class="footer-bottom__navigation">Blog</li>
                     <li class="footer-bottom__navigation">Contact</li>
                 </ul>
             </div>
@@ -449,7 +559,7 @@
 
 
 
-    <script src="js/main.min.js"></script>
+    <script src="js/main.min.js "></script>
 </body>
 
 </html>
