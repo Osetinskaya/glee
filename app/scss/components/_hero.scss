@@ -1,0 +1,94 @@
+.hero {
+    &__inner {
+        height: 91vh;
+        background-color: $inner;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__item {
+        margin: 0 auto;
+        max-width: 1170px;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__content {
+        max-width: 440px;
+    }
+    &__title {
+        @extend %rubik-500;
+        font-size: 69px;
+        line-height: 1.1;
+        color: $title;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    &__text {
+        color: $text;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        max-width: 345px;
+    }
+    &__link {
+        background-color: $link;
+        color: $bg;
+        max-width: 200px;
+        padding: 15px 13px 15px 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        outline: transparent;
+        position: relative;
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: $link__hover;
+        }
+        &:active {
+            background-color: $link__active;
+        }
+        &::after {
+            content: url(../images/slider/arrow.svg);
+            position: absolute;
+            right: 15px;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 45px;
+        left: 0;
+        right: 0;
+        li:not(:last-child) {
+            margin-right: 10px;
+        }
+        button {
+            background-color: $bg;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 15px;
+            padding: 0;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            position: relative;
+            opacity: 0.5;
+            transition: box-shadow 0.3s;
+            &:hover {
+                outline: none;
+                box-shadow: 0 0 10px 5px $button__hover;
+            }
+        }
+        .slick-active>button {
+            opacity: 1;
+        }
+    }
+    &__img {
+        z-index: 10;
+        height: 263px;
+    }
+}
