@@ -1,7 +1,6 @@
 .footer {
     @extend %rubik-400;
     color: $footer;
-    max-width: 1295px;
     margin: 0 auto;
     &__inner {
         display: flex;
@@ -16,7 +15,6 @@
         display: flex;
         flex-direction: column;
         text-align: left;
-        margin-right: 100px;
     }
     &__logo {
         margin-bottom: 30px;
@@ -26,9 +24,10 @@
     }
     &__nav {
         display: flex;
+        margin: 0 auto;
     }
-    &__package {
-        margin-right: 180px;
+    &__package:first-child {
+        margin-right: 130px;
     }
     &__title {
         font-weight: 700;
@@ -36,6 +35,10 @@
         color: #1f2044;
         text-transform: uppercase;
         margin-bottom: 30px;
+    }
+    &__list,
+    &__text {
+        font-size: 14px;
     }
     &__item {
         @extend %rubik-400;
@@ -65,11 +68,12 @@
             background-color: $footer__input-active;
         }
         &::placeholder {
+            font-size: 12px;
             color: $footer__input-placeholder;
         }
     }
     &__btn {
-        @extend %dmsans-400;
+        font-size: 14px;
         background-color: $footer__btn;
         color: $bg;
         outline: transparent;

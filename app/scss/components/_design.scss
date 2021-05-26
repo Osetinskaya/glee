@@ -1,0 +1,73 @@
+.design {
+    font-weight: 700;
+    &__title {
+        font-size: 36px;
+        color: #191919;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        color: $products__item;
+        opacity: 0.5;
+        font-size: 16px;
+        margin-bottom: 60px;
+        transition: opacity 0.5s;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+        &:active,
+        .mixitup-control-active {
+            opacity: 0.3;
+        }
+    }
+    &__card {
+        position: relative;
+        width: 370px;
+        height: 250px;
+        padding: 40px 0 25px 35px;
+        cursor: pointer;
+        background-color: $design__bg;
+        font-size: 16px;
+        transition: opacity 0.5s;
+        margin-bottom: 35px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    &__text {
+        max-width: 200px;
+        text-align: left;
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__name {
+        color: $design__title;
+        font-size: 20px;
+    }
+    &__type {
+        color: $design__type;
+        font-size: 16px;
+    }
+    &__img {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        height: 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 10;
+        &--chair {
+            height: 70%;
+            right: 30px;
+        }
+    }
+}
