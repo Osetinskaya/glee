@@ -1,5 +1,5 @@
 .service {
-    margin-bottom: 49px;
+    margin-bottom: 63px;
     &__list {
         background-color: $list;
         display: flex;
@@ -18,14 +18,13 @@
     &__content {
         position: relative;
         max-width: 260px;
-        padding-left: 45px;
-        padding-top: 15px;
+        padding-left: 50px;
         &--support {
             &::before {
                 content: url(../images/support.svg);
                 position: absolute;
                 top: 12px;
-                left: -40px;
+                left: -18px;
             }
         }
         &--delivery {
@@ -41,7 +40,7 @@
                 content: url(../images/payment.svg);
                 position: absolute;
                 top: 17px;
-                left: -31px;
+                left: -23px;
             }
         }
     }
