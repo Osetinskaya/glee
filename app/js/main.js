@@ -6,7 +6,27 @@ $(function() {
         autoplay: true,
         fadetime: 700
     });
+    $('.sponsors__list').slick({
+        infinite: true,
+        slidesToShow: 5,
+        arrows: false,
+        autoplay: true
+    });
 
-    var mixit = mixitup('.product__content');
-    var mixier = mixitup('.design__content');
+    var mixerOne = mixitup('.product__content');
+    var mixierTwo = mixitup('.design__content');
+
+    $(function() {
+        var mixerOne = mixitup('.product__content', {
+            controls: {
+                scope: 'local'
+            }
+        });
+
+        var mixerTwo = mixitup('.design__content', {
+            controls: {
+                scope: 'local'
+            }
+        });
+    });
 });

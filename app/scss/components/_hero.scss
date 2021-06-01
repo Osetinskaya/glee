@@ -9,9 +9,21 @@
     &__item {
         margin: 0 auto;
         max-width: 1170px;
+        height: 80vh;
         display: flex !important;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        &::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(to right, $inner, $bg);
+            background-repeat: no-repeat;
+            width: 38%;
+            height: 71vh;
+            border-radius: 50%;
+            right: 180px;
+            bottom: 25px;
+        }
     }
     &__content {
         max-width: 440px;
@@ -19,17 +31,18 @@
     &__title {
         @extend %rubik-500;
         font-size: 69px;
-        line-height: 1.1;
+        line-height: 1;
         color: $title;
         text-transform: uppercase;
         margin-bottom: 40px;
     }
     &__text {
+        @extend %rubik-400;
         color: $text;
         font-size: 18px;
         line-height: 1.6;
         margin-bottom: 40px;
-        max-width: 345px;
+        max-width: 370px;
     }
     &__link {
         background-color: $link;
@@ -90,5 +103,6 @@
     &__img {
         z-index: 10;
         height: 263px;
+        position: relative;
     }
 }

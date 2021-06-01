@@ -75,8 +75,8 @@
         }
         &--like {
             background-image: url(../images/icon/like.svg);
-            border-top-left-radius: 35%;
-            border-bottom-left-radius: 35%;
+            border-top-left-radius: 70px;
+            border-bottom-left-radius: 70px;
             padding-left: 35px;
             padding-right: 55px;
             margin-right: 0 !important;
@@ -96,8 +96,8 @@
             background-image: url(../images/icon/card.svg);
             padding-left: 55px;
             padding-right: 35px;
-            border-top-right-radius: 35%;
-            border-bottom-right-radius: 35%;
+            border-top-right-radius: 70px;
+            border-bottom-right-radius: 70px;
         }
         &--like,
         &--card {
