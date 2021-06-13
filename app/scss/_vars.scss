@@ -1,81 +1,54 @@
-$bg:#fff;
+$white:#fff;
+$title:#191919;
 
-/* ЦВЕТА HEADER */
+/* BLUE*/
 
-$accent:#324e5b;
-$default:#436372;
-$link__focus:#c7c7c7;
-$search__bg:#edf1f4;
-$search__hover:#ced4da;
-$search__active:#a4afb8;
-$favorites__bg:#fcd7b6;
-$favorites__hover:#fcc391;
-$favorites__active:#f5a45e;
-$grid__bg:#a3bbc8;
-$grid__hover:#79a9c4;
-$grid__active:#51819c;
+$blue-950:#1f2044;
+$blue-900:#324e5b;
+$blue-850:#32505e;
+$blue-800:#243f4d;
+$blue-750:#506068;
+$blue-700:#436372;
+$blue-650:#4f6b77;
+$blue-600:#234969;
+$blue-550:#458db4;
+$blue-500:#51819c;
+$blue-450:#6fa0bb;
+$blue-400:#79a9c4;
+$blue-350:#a3bbc8;
+$blue-300:#6e818b;
+$blue-250:#859aa5;
+$blue-200:#a3bac7;
+$blue-150:#edf1f4;
 
-/* ЦВЕТА HERO */
+/* GRAY */
 
-$title:#243f4d;
-$text:#4f6b77;
-$link:#a3bbc8;
-$inner:#fcd7b6;
-$link__hover:#788c97;
-$link__active:#506068;
-$button__hover:#bbbbbb;
+$gray-950:#000;
+$gray-900:#262626;
+$gray-850:#333333;
+$gray-800:#414141;
+$gray-750:#585858;
+$gray-700:#646161;
+$gray-650:#afa9a9;
+$gray-600:#bbbbbb;
+$gray-550:#b3b7b5;
+$gray-500:#c9bebe;
+$gray-450:#e0e0e0;
+$gray-400:#f8f8f8;
 
-/* ЦВЕТА SERVICE */
+/* YELLOW */
 
-$list:#fef7f0;
-$item:#e8e4df;
-$service__title:#414141;
-$service__text:#585858;
-
-/* ЦВЕТА PRODUCTS */
-
-$products__item:#000;
-
-/* ЦВЕТА PRODUCT */
-
-$shadow:#f8f8f8;
-$tool:#a3bbc8;
-$item__hover:#a3bac7;
-$item__active:#6e818b;
-$lamp__bg:#feefe2;
-$lamp__content:#243f4d;
-$lamp__view:#436372;
-$lamp__border:#b3b7b5;
-$lamp__hover:#ffd6b3;
-$lamp__active:#afa9a9;
-
-/* ЦВЕТА DESIGN */
-
-$design__bg:#f8f8f8;
-$design__title:#191919;
-$design__type:#a3bbc8;
-$design__view:#585858;
-$design__bottom:#fef7f0;
-$play:#a3bbc8;
-$play__hover:#a3bbc8a1;
-$play__active:#859aa5;
-$play__active_shadow:#859aa5af;
-$insights__text:#262626;
-$insights__border:#e0e0e0;
-
-/* ЦВЕТА FOOTER */
-
-$footer:#7b7b7b;
-$footer__inner:#7b7b7b;
-$footer__title:#1f2044;
-$footer__item-hover:#646161;
-$footer__item-active:#333333;
-$footer__input-hover:#f7cb9ee8;
-$footer__input-active:#f3b06de8;
-$footer__input-placeholder:#1f2044;
-$footer__btn: #a3bbc8;
-$footer__btn-hover:#6fa0bb;
-$footer__btn-active:#458db4;
+$yellow-950:#f1a25d;
+$yellow-900:#f3b06d;
+$yellow-800:#fcc391;
+$yellow-850:#fcd7b6;
+$yellow-800:#fcd7b6;
+$yellow-750:#fef7f0;
+$yellow-700:#e8e4df;
+$yellow-650:#feefe2;
+$yellow-600:#ffd6b3;
+$yellow-550:#f7cb9e;
+$yellow-500:#f8f3ee;
 
 /* ШРИФТЫ */
 
@@ -107,4 +80,39 @@ $footer__btn-active:#458db4;
 %rubik-500 {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
+}
+
+@mixin line_clamp($lc) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lc;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin mix-nav_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 74px;
+    &__item {
+        color: $gray-950;
+        opacity: 0.5;
+        font-size: 16px;
+        transition: opacity 0.5s;
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+        &:active,
+        .mixitup-control-active {
+            opacity: 0.3;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        background-color: $white;
+        outline: transparent;
+        border: 0;
+    }
 }
