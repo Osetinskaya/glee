@@ -1,20 +1,28 @@
 body {
+    @extend %dmsans-400;
+    background-color: $white;
     color: #a3bbc8;
+    font-family: sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    @extend %dmsans-400;
 }
 
 .container {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
+    &--sm {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 }
 
-.container--litle {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0;
+.title {
+    font-size: 36px;
+    color: $title;
+    text-align: center;
+    margin-bottom: 7px;
 }
 
 .sr-only {

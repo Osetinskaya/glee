@@ -1,25 +1,20 @@
 .footer {
     @extend %rubik-400;
-    color: $footer;
-    margin: 0 auto;
+    color: $gray-900;
     &__inner {
         display: flex;
-        padding: 80px 0 58px;
-        margin-bottom: 27px;
-        border-bottom: 2px solid $footer__inner;
+        padding-bottom: 58px;
+        border-bottom: 2px solid $gray-650;
     }
     &__address {
         font-style: normal;
         max-width: 215px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
     }
     &__logo {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     &__contacts {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
     }
     &__nav {
         display: flex;
@@ -31,7 +26,7 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 1.3;
-        color: #1f2044;
+        color: $blue-950;
         text-transform: uppercase;
         margin-bottom: 18px;
     }
@@ -43,80 +38,94 @@
         @extend %rubik-400;
         margin-bottom: 10px;
         &:hover {
-            color: $footer__item-hover;
+            color: $gray-700;
         }
         &:active {
-            color: $footer__item-active;
+            color: $gray-850;
         }
     }
     &__block {
         padding-top: 18px;
     }
     &__text {
+        @include line_clamp(2);
         max-width: 240px;
         margin-bottom: 33px;
     }
-    &__input {
+    &__form {
         @extend %dmsans-400;
-        background-color: #fef7f0;
+        font-size: 14px;
+        display: flex;
+    }
+    &__input {
+        background-color: $yellow-750;
         outline: transparent;
         border: none;
         width: 169px;
-        padding: 5px 15px;
+        padding: 5px 20px;
+        outline: 0 solid transparent;
         transition: background-color 0.5s;
+        &:focus {
+            outline: 1px solid $gray-850;
+        }
         &:hover {
-            background-color: $footer__input-hover;
+            background-color: $yellow-550;
         }
         &:active {
-            background-color: $footer__input-active;
+            background-color: $yellow-900;
         }
         &::placeholder {
-            font-size: 12px;
-            color: $footer__input-placeholder;
+            font-style: 12px;
+            color: $blue-600;
         }
     }
     &__btn {
-        font-size: 14px;
-        background-color: $footer__btn;
-        color: $bg;
+        background-color: $blue-350;
+        color: $white;
         outline: transparent;
         border: none;
         padding: 5px 20px;
         transition: background-color 0.5s;
+        &:focus {
+            background-color: $blue-750;
+        }
         &:hover {
-            background-color: $footer__btn-hover
+            background-color: $blue-450;
         }
         &:active {
-            background-color: $footer__btn-active
+            background-color: $blue-550;
         }
     }
 }
 
-.footer-bottom {
+.footer__bottom {
     display: flex;
     justify-content: space-between;
-    color: #7b7b7b;
+    padding: 25px 0;
+    color: $gray-700;
     transition: color 0.5s;
-    &__nav {
+    &-navigation {
         display: flex;
     }
-    &__navigation {
-        cursor: pointer;
+    &-nav {
         &:not(:last-child) {
             margin-right: 10px;
         }
         &:not(:last-child)::after {
             content: '';
             position: relative;
-            border-left: 2px solid #7b7b7b;
+            border-left: 2px solid $gray-700;
             right: 5px;
             margin-left: 15px;
         }
+    }
+    &-link {
+        cursor: pointer;
         &:hover {
-            color: #646161;
+            color: $gray-700;
         }
         &:active {
-            color: #333333;
+            color: $gray-850;
         }
     }
 }

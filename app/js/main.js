@@ -9,15 +9,16 @@ $(function() {
     $('.sponsors__list').slick({
         infinite: true,
         slidesToShow: 5,
+        slidesToScroll: 1,
         arrows: false,
         autoplay: true
     });
 
-    var mixerOne = mixitup('.product__content');
+    var mixerOne = mixitup('.products__content');
     var mixierTwo = mixitup('.design__content');
 
     $(function() {
-        var mixerOne = mixitup('.product__content', {
+        var mixerOne = mixitup('.products__content', {
             controls: {
                 scope: 'local'
             }
