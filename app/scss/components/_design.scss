@@ -30,38 +30,39 @@
             opacity: 0.5;
         }
     }
-    &-card {
-        &__link {
-            display: block;
-            cursor: pointer;
-        }
-        &__text {
-            max-width: 200px;
-        }
-        &__name {
-            @include line_clamp(2);
-            color: $blue-800;
-            font-size: 20px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        &__type {
-            @include line_clamp(1);
-            color: $blue-350;
-            font-size: 16px;
-        }
-        &__img {
-            position: absolute;
-            right: 0;
-            bottom: 20px;
-            height: 90%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: 10;
-            &--chair {
-                height: 70%;
-                right: 30px;
-            }
+}
+
+.design-card {
+    &__link {
+        display: block;
+        cursor: pointer;
+    }
+    &__text {
+        max-width: 200px;
+    }
+    &__name {
+        @include line_clamp(2);
+        color: $blue-800;
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    &__type {
+        @include line_clamp(1);
+        color: $blue-350;
+        font-size: 16px;
+    }
+    &__img {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        height: 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 10;
+        &--chair {
+            height: 70%;
+            right: 30px;
         }
     }
 }
