@@ -1,7 +1,7 @@
 body {
     @extend %dmsans-400;
     background-color: $white;
-    color: #a3bbc8;
+    color: $blue-350;
     font-family: sans-serif;
     font-size: 16px;
     line-height: 1.7;
@@ -23,6 +23,15 @@ body {
     color: $title;
     text-align: center;
     margin-bottom: 7px;
+    @include r($r-xs) {
+        font-size: 24px;
+    }
+}
+
+.logo {
+    &__img {
+        object-fit: contain;
+    }
 }
 
 .sr-only {

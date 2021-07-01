@@ -5,6 +5,10 @@
         display: flex;
         padding-bottom: 58px;
         border-bottom: 2px solid $gray-650;
+        @include r($r-m) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__address {
         font-style: normal;
@@ -21,6 +25,13 @@
         justify-content: space-evenly;
         width: 58%;
         padding-top: 18px;
+    }
+    &__package {
+        &--services {
+            @include r($r-m) {
+                margin-right: 20px;
+            }
+        }
     }
     &__title {
         font-size: 16px;
@@ -96,30 +107,34 @@
             background-color: $blue-550;
         }
     }
-}
-
-.footer__bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 0;
-    color: $gray-700;
-    transition: color 0.5s;
-    &-navigation {
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        color: $gray-700;
+        transition: color 0.5s;
+        @include r($r-m) {
+            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__bottom-navigation {
         display: flex;
     }
-    &-nav {
+    &__bottom-nav {
         &:not(:last-child) {
             margin-right: 10px;
-        }
-        &:not(:last-child)::after {
-            content: '';
-            position: relative;
-            border-left: 2px solid $gray-700;
-            right: 5px;
-            margin-left: 15px;
+            &::after {
+                content: '';
+                position: relative;
+                border-left: 2px solid $gray-700;
+                right: 5px;
+                margin-left: 15px;
+            }
         }
     }
-    &-link {
+    &__bottom-link {
         cursor: pointer;
         &:hover {
             color: $gray-700;

@@ -1,10 +1,20 @@
 .header {
     padding: 40px 0 45px;
+    @include r($r-s) {
+        padding: 10px 0;
+    }
+    @include r($r-xs) {
+        padding: 5px 0;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.logo__img {
+    width: 100px;
 }
 
 .menu {
@@ -14,12 +24,89 @@
     align-items: center;
     width: 100%;
     color: $blue-950;
+    &__btn {
+        display: none;
+        @include r($r-m) {
+            display: block;
+            background-color: $blue-150;
+            fill: $blue-800;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            transition: box-shadow 0.5s, background-color 0.5s;
+            &:hover {
+                background-color: $blue-450;
+            }
+            &:focus {
+                box-shadow: 0 0 15px 5px rgba(110, 130, 141, 0.3)
+            }
+            &:active {
+                fill: $white;
+                background-color: $blue-550;
+                transform: rotate(-180deg);
+            }
+            &--back {
+                transform: rotate(180deg);
+            }
+            svg {
+                width: 15px;
+                height: 20px;
+                transform: translate(0%, 25%);
+                @include r($r-xs) {
+                    width: 12px;
+                    transform: translate(0%, 0);
+                }
+            }
+            @include r($r-xs) {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
     &__list {
         display: flex;
         margin: 0 auto;
+        @include r($r-m) {
+            transform: translateY(-200%);
+            flex-direction: column;
+            text-align: center;
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            top: 90px;
+            background-color: $white;
+            z-index: 20;
+            transition: transform 0.5s;
+            @include r($r-s) {
+                top: 60px;
+            }
+            @include r($r-xs) {
+                top: 40px;
+            }
+        }
+        @include r($r-xs) {
+            padding-top: 0;
+            flex-direction: column;
+        }
+        &--active {
+            transform: translateY(0);
+            background-image: linear-gradient($white, $blue-200);
+        }
     }
     &__item:not(:last-child) {
         margin-right: 35px;
+        @include r($r-l) {
+            margin-right: 20px;
+        }
+        @include r($r-m) {
+            margin-right: 0;
+            padding: 10px 0;
+        }
     }
     &__link {
         position: relative;
@@ -31,129 +118,200 @@
         &:focus {
             outline: 0;
             padding: 5px 0;
-            box-shadow: 0px 0px 10px 0 $gray-800;
+            box-shadow: 0 0 10px 0 $gray-800;
         }
         &:hover {
             border-bottom: 1px solid $blue-950;
             padding-bottom: 5px;
         }
-        &-down {
-            position: absolute;
-            cursor: pointer;
-            background-color: transparent;
-            color: $blue-700;
-            outline: 0;
-            border: 0;
-        }
     }
-    .logo {
-        &__img {
-            width: 145px;
-            height: 45px;
-            object-fit: contain;
-        }
-    }
-}
-
-.user-nav {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 5px;
-    cursor: pointer;
-    &__link {
-        border: transparent;
-        outline: 0;
-        width: 50px;
-        height: 50px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        position: relative;
-        @extend %rubik-500;
-        transition: background-color 0.5s;
-        &:first-child {
-            margin-right: 20px;
-        }
-        &:last-child {
-            margin-left: 20px;
-        }
-        &--search {
-            background-image: url(../images/icon/search.svg);
-            background-color: $blue-150;
-            border-radius: 50%;
-            &:focus {
-                background-color: $blue-450;
-            }
-            &:hover {
-                background-color: $blue-400;
-            }
-            &:active {
-                background-color: $blue-550;
-            }
-        }
-        &--like {
-            background-image: url(../images/icon/like.svg);
-            border-top-left-radius: 70px;
-            border-bottom-left-radius: 70px;
-            padding-left: 35px;
-            padding-right: 55px;
-            &::after {
-                content: '';
-                width: 2px;
-                height: 35px;
-                right: 0;
-                top: 5px;
-                background-color: $white;
-                z-index: 10;
-                opacity: 0.5;
-                position: absolute;
-            }
-        }
-        &--card {
-            background-image: url(../images/icon/card.svg);
-            padding-left: 55px;
-            padding-right: 35px;
-            border-top-right-radius: 70px;
-            border-bottom-right-radius: 70px;
-        }
-        &--like,
-        &--card {
-            background-color: $yellow-850;
-            transition: background-color 0.5s;
-            &:focus {
-                background-color: $yellow-550;
-            }
-            &:hover {
-                background-color: $yellow-900;
-            }
-            &:active {
-                background-color: $yellow-1000;
-            }
-        }
-        &--grid {
-            background-image: url(../images/icon/grid.svg);
-            background-color: $blue-350;
-            border-radius: 47%;
-            &:focus {
-                background-color: $blue-450;
-            }
-            &:hover {
-                background-color: $blue-500;
-            }
-            &:active {
-                background-color: $blue-650;
-            }
-        }
-    }
-    &__num {
+    &__link-down {
         position: absolute;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: $white;
-        top: 9px;
-        right: 25px;
-        font-size: 9px;
-        line-height: 1.7;
-        text-align: center;
+        cursor: pointer;
+        background-color: transparent;
+        color: $blue-700;
+        outline: 0;
+        border: 0;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        &__link {
+            border: transparent;
+            outline: 0;
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            position: relative;
+            @extend %rubik-500;
+            transition: background-color 0.5s, fill 0.5s;
+            @include r($r-l) {
+                width: 30px;
+                height: 30px;
+            }
+            @include r($r-xs) {
+                width: 20px;
+                height: 20px;
+            }
+            &:first-child {
+                margin-right: 20px;
+                @include r($r-l) {
+                    margin-right: 10px;
+                }
+                @include r($r-xs) {
+                    margin-right: 5px;
+                }
+            }
+            &:last-child {
+                margin-left: 20px;
+                @include r($r-l) {
+                    margin-left: 10px;
+                }
+                @include r($r-xs) {
+                    margin-left: 5px;
+                }
+            }
+            &--search {
+                position: relative;
+                fill: $blue-900;
+                background-color: $blue-150;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border: transparent;
+                outline: 0;
+                cursor: pointer;
+                border-radius: 50%;
+                &:focus {
+                    fill: $white;
+                    background-color: $blue-450;
+                }
+                &:hover {
+                    fill: $white;
+                    background-color: $blue-400;
+                }
+                &:active {
+                    fill: $white;
+                    background-color: $blue-550;
+                }
+            }
+            &--like {
+                border-top-left-radius: 70px;
+                border-bottom-left-radius: 70px;
+                padding-left: 35px;
+                padding-right: 55px;
+                @include r($r-l) {
+                    padding-left: 20px;
+                    padding-right: 40px;
+                }
+                @include r($r-xs) {
+                    padding: 0 20px;
+                }
+                &::after {
+                    content: '';
+                    width: 2px;
+                    height: 35px;
+                    right: 0;
+                    top: 5px;
+                    background-color: $white;
+                    z-index: 10;
+                    opacity: 0.5;
+                    position: absolute;
+                    @include r($r-l) {
+                        height: 20px;
+                    }
+                }
+            }
+            &--card {
+                padding-left: 55px;
+                padding-right: 35px;
+                border-top-right-radius: 70px;
+                border-bottom-right-radius: 70px;
+                @include r($r-l) {
+                    padding-left: 40px;
+                    padding-right: 20px;
+                }
+                @include r($r-xs) {
+                    padding: 0 20px;
+                }
+            }
+            &--like,
+            &--card {
+                background-color: $yellow-850;
+                transition: background-color 0.5s;
+                &:focus {
+                    background-color: $yellow-550;
+                }
+                &:hover {
+                    background-color: $yellow-900;
+                }
+                &:active {
+                    background-color: $yellow-1000;
+                }
+            }
+            &--grid {
+                fill: $white;
+                background-color: $blue-350;
+                border-radius: 47%;
+                &:focus {
+                    background-color: $blue-450;
+                }
+                &:hover {
+                    background-color: $blue-500;
+                }
+                &:active {
+                    background-color: $blue-650;
+                }
+            }
+            &--svg {
+                transform: translate(5%, 25%);
+                width: 17px;
+                height: 20px;
+                @include r($r-xs) {
+                    transform: translate(-20%, -10%);
+                }
+            }
+            &--purchase {
+                position: absolute;
+                right: 35px;
+                top: 15px;
+                width: 17px;
+                height: 20px;
+                @include r($r-l) {
+                    top: 7px;
+                    right: 22px;
+                }
+                @include r($r-xs) {
+                    width: 15px;
+                    height: 17px;
+                    top: 3px;
+                    right: 14px;
+                }
+            }
+        }
+        &__num {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: $white;
+            top: 9px;
+            right: 25px;
+            font-size: 9px;
+            line-height: 1.7;
+            text-align: center;
+            @include r($r-l) {
+                top: 3px;
+                right: 10px;
+            }
+            @include r($r-xs) {
+                top: 0;
+                right: 5px;
+                width: 13px;
+                height: 13px;
+            }
+        }
     }
 }

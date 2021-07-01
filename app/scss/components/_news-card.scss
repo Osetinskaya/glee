@@ -1,0 +1,91 @@
+.news-card {
+    border-radius: 10px;
+    position: relative;
+    &__link {
+        cursor: pointer;
+        max-height: 250px;
+        width: 100%;
+    }
+    &__news {
+        @extend %poppins-700;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $white;
+        background-color: $blue-350;
+        padding: 5px 30px;
+        border-radius: 30px;
+        position: absolute;
+        left: 20px;
+        bottom: 140px;
+        transition: background-color 0.5s, box-shadow 0.5s;
+        @include r($r-m) {
+            bottom: 105px;
+            padding: 2px 20px;
+        }
+        &:hover {
+            background-color: $blue-250;
+        }
+        &:active {
+            background-color: $blue-250;
+            box-shadow: 0 0 0 5px $blue-250;
+        }
+    }
+    &__content {
+        @include line_clamp(3);
+        line-height: 1.5;
+        text-align: left;
+        padding: 30px 65px 0 30px;
+        margin-bottom: 15px;
+        position: relative;
+        @include r($r-m) {
+            font-size: 12px;
+            padding: 10px 30px 0 15px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 315px;
+            border-bottom: 1px solid $gray-450;
+            bottom: 0;
+            @include r($r-m) {
+                max-width: 225px;
+            }
+        }
+    }
+    &__bottom {
+        font-size: 12px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        max-width: 260px;
+        padding-top: 10px;
+        padding-left: 50px;
+        @include r($r-m) {
+            padding-left: 25px;
+        }
+    }
+    &__admin {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url(../images/sprite.svg#user);
+            left: -20px;
+        }
+        &--calendar::before {
+            content: "";
+            background-image: url(../images/sprite.svg#calendar);
+            left: 30px;
+            @include r($r-m) {
+                left: 5px;
+            }
+        }
+        &::before,
+        &--calendar::before {
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

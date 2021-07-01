@@ -6,6 +6,16 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include r($r-l) {
+            height: 70vh;
+        }
+        @include r($r-s) {
+            height: 60vh;
+        }
+        @include r($r-xs) {
+            height: 40vh;
+            padding-top: 20px;
+        }
     }
     &__item {
         height: 80vh;
@@ -13,6 +23,21 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        @include r($r-l) {
+            height: 70vh;
+        }
+        @include r($r-m) {
+            height: 60vh;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        @include r($r-s) {
+            height: 60vh;
+        }
+        @include r($r-xs) {
+            height: 40vh;
+            justify-content: flex-start;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -22,10 +47,22 @@
             border-radius: 50%;
             right: 180px;
             bottom: 25px;
+            @include r($r-xl) {
+                width: 50vh;
+                height: 50vh;
+                bottom: 150px;
+                right: 0;
+            }
+            @include r($r-l) {
+                display: none;
+            }
         }
     }
     &__content {
         max-width: 440px;
+        @include r($r-l) {
+            text-align: center;
+        }
     }
     &__title {
         @include line_clamp(2);
@@ -34,6 +71,20 @@
         color: $blue-800;
         text-transform: uppercase;
         margin-bottom: 40px;
+        @include r($r-xl) {
+            font-size: 55px
+        }
+        @include r($r-l) {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+        @include r($r-s) {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        @include r($r-xs) {
+            font-size: 22px
+        }
     }
     &__text {
         @include line_clamp(2);
@@ -43,15 +94,18 @@
         line-height: 1.6;
         margin-bottom: 40px;
         max-width: 370px;
+        @include r($r-l) {
+            margin: 20px auto;
+            max-width: 350px;
+        }
+        @include r($r-xs) {
+            font-size: 16px;
+        }
     }
     &__link {
         background-color: $blue-350;
         color: $white;
-        max-width: 200px;
-        padding: 15px 13px 15px 28px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 25px 100px 25px 28px;
         border: none;
         outline: transparent;
         position: relative;
@@ -63,9 +117,20 @@
             background-color: $blue-700;
         }
         &::after {
-            content: url(../images/slider/arrow.svg);
+            content: url(../images/sprite.svg#slider__arrow);
             position: absolute;
+            width: 22px;
+            height: 9px;
             right: 15px;
+        }
+        @include r($r-l) {
+            padding: 15px 100px 15px 28px;
+        }
+        @include r($r-s) {
+            padding: 5px 70px 5px 10px;
+        }
+        @include r($r-xs) {
+            padding: 5px 50px 5px 10px;
         }
     }
     .slick-dots {
@@ -97,14 +162,33 @@
             &:hover {
                 box-shadow: 0 0 10px 5px $gray-600;
             }
+            @include r($r-xs) {
+                width: 20px;
+                height: 20px;
+                font-size: 12px;
+            }
         }
         .slick-active>button {
             opacity: 1;
+        }
+        @include r($r-l) {
+            bottom: 20px;
+        }
+        @include r($r-m) {
+            bottom: 10px;
         }
     }
     &__img {
         z-index: 10;
         object-fit: contain;
         position: relative;
+        @include r($r-l) {
+            max-width: 350px;
+        }
+        @include r($r-m) {
+            display: none;
+            width: 0;
+            height: 0;
+        }
     }
 }
