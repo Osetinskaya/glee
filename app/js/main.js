@@ -1,4 +1,14 @@
 $(function() {
+
+
+    $('.menu__btn').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+    });
+
+    $('.menu__btn').on('click', function() {
+        $('.menu__btn').toggleClass('menu__btn--back');
+    });
+
     $('.hero__inner').slick({
         dots: true,
         arrows: false,
@@ -17,6 +27,9 @@ $(function() {
     var mixerOne = mixitup('.products__content');
     var mixierTwo = mixitup('.design__content');
 
+
+
+
     $(function() {
         var mixerOne = mixitup('.products__content', {
             controls: {
@@ -30,4 +43,8 @@ $(function() {
             }
         });
     });
+
+
+
+
 });

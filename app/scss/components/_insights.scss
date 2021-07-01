@@ -2,6 +2,23 @@
     position: relative;
     color: $gray-900;
     margin-bottom: 80px;
+    @include r($r-s) {
+        margin-bottom: 50px;
+    }
+    @include r($r-xs) {
+        margin-bottom: 20px;
+    }
+    &__title {
+        @include r($r-l) {
+            font-size: 24px;
+        }
+        @include r($r-m) {
+            font-size: 20px;
+        }
+        @include r($r-s) {
+            font-size: 16px;
+        }
+    }
     &::before {
         content: "";
         background-color: $yellow-750;
@@ -16,32 +33,43 @@
     &__head {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         padding-right: 25px;
         margin-bottom: 35px;
-    }
-    .title {
-        &__insights {
-            margin-bottom: 0;
-            text-align: left;
+        @include r($r-xs) {
+            margin-bottom: 20px;
         }
+    }
+    &__insights {
+        margin-bottom: 0;
+        text-align: left;
     }
     &__link {
         font-weight: 600;
         position: relative;
         border-bottom: 1px solid transparent;
         padding-bottom: 1px;
-        transition: border-bottom 0.5s, opacity 0.5s;
+        transition: border-bottom 0.3s, opacity 0.5s;
         cursor: pointer;
+        @include r($r-s) {
+            font-size: 14px;
+        }
+        @include r($r-xs) {
+            font-size: 12px;
+        }
         &::after {
             content: "";
-            background-image: url(../images/arrow.svg);
+            background-image: url(../images/sprite.svg#insights__arrow);
             background-repeat: no-repeat;
             width: 10px;
             height: 15px;
             position: absolute;
-            top: 10px;
-            right: -30px;
+            top: 7px;
+            right: -20px;
+            @include r($r-xs) {
+                top: 5px;
+                right: -15px;
+            }
         }
         &:hover {
             border-bottom: 1px solid $blue-800;
@@ -53,16 +81,28 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        @include r($r-l) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__item {
         position: relative;
         background-color: $white;
         max-width: 370px;
-        border-radius: 10px;
         padding-bottom: 25px;
         transition: box-shadow 0.5s;
+        @include r($r-l) {
+            margin-bottom: 25px;
+        }
+        @include r($r-m) {
+            max-width: 250px;
+        }
         &:not(:last-child) {
             margin-right: 30px;
+            @include r($r-l) {
+                margin-right: 20px;
+            }
         }
         &:hover {
             box-shadow: 0 0 20px 5px $gray-650;
@@ -70,98 +110,5 @@
         &:active {
             box-shadow: 0 0 10px 5px $gray-500;
         }
-    }
-    .news-card {
-        cursor: pointer;
-        position: relative;
-        &__img {
-            max-height: 250px;
-            width: 100%;
-        }
-        &__news {
-            @extend %poppins-700;
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $white;
-            background-color: $blue-350;
-            padding: 5px 30px;
-            border-radius: 30px;
-            position: absolute;
-            bottom: 130px;
-            left: 27px;
-            cursor: pointer;
-            transition: background-color 0.5s, box-shadow 0.5s;
-            &:hover {
-                background-color: $blue-250;
-            }
-            &:active {
-                background-color: $blue-250;
-                box-shadow: 0 0 0 5px $blue-250;
-            }
-        }
-        &__content {
-            @include line_clamp(3);
-            line-height: 1.5;
-            text-align: left;
-            padding: 30px 65px 0 30px;
-            margin-bottom: 15px;
-            &::after {
-                content: "";
-                position: absolute;
-                height: 1px;
-                width: 315px;
-                border-bottom: 1px solid $gray-450;
-                bottom: 30px;
-            }
-        }
-        &__bottom {
-            font-size: 12px;
-            text-transform: uppercase;
-            display: flex;
-            padding-top: 10px;
-            padding-left: 45px;
-        }
-        &__date {
-            position: relative;
-            margin-right: 40px;
-            &::before {
-                content: "";
-                background-image: url(../../images/calendar.png);
-            }
-        }
-        &__author {
-            position: relative;
-            &::before {
-                content: "";
-                background-image: url(../../images/user.png);
-            }
-        }
-        &__date::before,
-        &__author::before {
-            position: absolute;
-            background-repeat: no-repeat;
-            width: 15px;
-            height: 15px;
-            left: -20px;
-        }
-    }
-}
-
-.sponsors {
-    padding: 85px 0 80px;
-    &__img {
-        height: 90px;
-        width: 170px;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-position: center;
-        object-fit: contain;
-    }
-    .slick-track {
-        display: flex;
-        justify-content: space-around;
-    }
-    .slick-slide {
-        width: 300px !important;
     }
 }

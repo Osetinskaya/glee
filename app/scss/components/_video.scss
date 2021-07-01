@@ -1,4 +1,5 @@
 .video {
+    cursor: pointer;
     height: 500px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -6,8 +7,23 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    position: relative;
+    @include r($r-s) {
+        height: 400px;
+        margin-bottom: 50px;
+    }
+    @include r($r-xs) {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    &:hover &__link {
+        box-shadow: 0 0 0 15px rgba(163, 187, 200, 0.5);
+    }
+    &:active &__link {
+        background-color: $blue-250;
+        box-shadow: 0 0 0 15px rgba(73, 85, 92, 0.6);
+    }
     &__link {
-        position: relative;
         background-repeat: no-repeat;
         height: 100px;
         width: 100px;
@@ -16,6 +32,11 @@
         background-color: $blue-350;
         border-radius: 50%;
         transition: background-color 0.5s, box-shadow 0.7s;
+        z-index: 10;
+        @include r($r-xs) {
+            width: 50px;
+            height: 50px;
+        }
         &:hover {
             box-shadow: 0 0 0 15px rgba(163, 187, 200, 0.5);
         }
@@ -33,5 +54,10 @@
         display: inline-block;
         width: 25px;
         height: 25px;
+        z-index: 10;
+        @include r($r-xs) {
+            width: 15px;
+            height: 20px;
+        }
     }
 }
