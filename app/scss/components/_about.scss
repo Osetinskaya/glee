@@ -1,0 +1,264 @@
+.company {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $blue-800;
+        padding: 120px 0;
+    }
+    &__img {
+        background-repeat: no-repeat;
+        object-fit: contain;
+        z-index: 1;
+        width: 570px;
+        height: 685px;
+    }
+    &__annotation {
+        width: 45%;
+    }
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__text {
+        @include line_clamp(4);
+        margin-bottom: 60px;
+    }
+}
+
+.experience {
+    @extend %rubik-400;
+    display: flex;
+    align-items: center;
+    max-width: 270px;
+    &__years {
+        font-size: 140px;
+        font-weight: 900;
+        color: $blue-350;
+        margin-right: 30px;
+    }
+    &__text {
+        padding-top: 25px;
+        color: $blue-800;
+        line-height: 1.9;
+    }
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-between;
+    max-width: 470px;
+    margin: 0 auto;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 500px;
+        border-bottom: 1px solid $gray-450;
+        bottom: 80px;
+        left: -30px;
+    }
+    &__item {
+        position: relative;
+        margin-right: 10px;
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 65px;
+                width: 1px;
+                border-right: 1px solid $gray-450;
+                color: $gray-450;
+                bottom: 0;
+                right: -50%;
+            }
+        }
+        &--projects {
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url(../images/sprite.svg#projects);
+            }
+        }
+        &--revenue {
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url(../images/sprite.svg#revenue);
+            }
+        }
+        &--awards {
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url(../images/sprite.svg#awards);
+            }
+        }
+        &--projects::before,
+        &--revenue::before,
+        &--awards::before {
+            position: absolute;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 40px;
+            left: -45px;
+            bottom: 15px;
+        }
+    }
+    &__num {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1;
+        position: relative;
+    }
+}
+
+.statistik {
+    background-color: $yellow-850;
+    padding: 90px 0 80px;
+    color: $blue-900;
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/sprite.svg#stat__after);
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            width: 35px;
+            height: 35px;
+            right: 30px;
+            bottom: 80px;
+        }
+        &--clients {
+            &::after {
+                right: 42px;
+            }
+        }
+    }
+    &__img {
+        width: 80px;
+        height: 60px;
+        fill: $blue-900;
+    }
+    &__number {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    &__text {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.team {
+    padding: 120px 0 120px;
+    color: $blue-800;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__about {
+        width: 40%;
+        @include line_clamp(10);
+    }
+    &__title {
+        margin-bottom: 35px;
+        text-align: left;
+    }
+    &__text {
+        max-width: 70%;
+        margin-bottom: 40px;
+    }
+    &__link {
+        background-color: $blue-350;
+        color: $white;
+        padding: 20px 60px 20px 25px;
+        border: none;
+        border-radius: 10px;
+        outline: transparent;
+        position: relative;
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: $blue-400;
+        }
+        &:active {
+            background-color: $blue-700;
+        }
+        &::after {
+            content: url(../images/sprite.svg#slider__arrow);
+            position: absolute;
+            width: 15px;
+            height: 9px;
+            right: 15px;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin-right: -150px;
+    }
+    &__item {
+        position: relative;
+        margin-right: 30px;
+        margin-bottom: 100px;
+    }
+    &__img {
+        width: 320px;
+        height: 320px;
+        object-fit: contain;
+    }
+    &__btn {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $gray-350;
+        outline: 0;
+        border: transparent;
+        transition: background-color 0.5s, box-shadow 0.5s;
+        &:hover {
+            background-color: $yellow-850;
+        }
+        &:active {
+            box-shadow: 0 0 15px 5px $gray-650;
+        }
+        &--insta {
+            margin-right: 10px;
+        }
+    }
+    &__svg {
+        position: absolute;
+        fill: $gray-500;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 20px;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+    }
+    &__info {
+        position: absolute;
+        width: 260px;
+        padding: 30px 0;
+        background-color: $white;
+        bottom: -55px;
+    }
+    &__information {
+        width: 135px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__name {
+        color: $blue-700;
+    }
+}

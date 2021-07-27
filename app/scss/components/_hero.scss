@@ -1,194 +1,179 @@
-.hero {
-    @extend %rubik-500;
-    &__inner {
-        height: 91vh;
-        background-color: $yellow-800;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        @include r($r-l) {
-            height: 70vh;
-        }
-        @include r($r-s) {
-            height: 60vh;
-        }
-        @include r($r-xs) {
-            height: 40vh;
-            padding-top: 20px;
-        }
-    }
-    &__item {
-        height: 80vh;
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        @include r($r-l) {
-            height: 70vh;
-        }
-        @include r($r-m) {
-            height: 60vh;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-        @include r($r-s) {
-            height: 60vh;
-        }
-        @include r($r-xs) {
-            height: 40vh;
-            justify-content: flex-start;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            background-image: linear-gradient(to right, $yellow-800, $white);
-            width: 71vh;
-            height: 71vh;
-            border-radius: 50%;
-            right: 180px;
-            bottom: 25px;
-            @include r($r-xl) {
-                width: 50vh;
-                height: 50vh;
-                bottom: 150px;
-                right: 0;
-            }
-            @include r($r-l) {
-                display: none;
-            }
-        }
-    }
-    &__content {
-        max-width: 440px;
-        @include r($r-l) {
-            text-align: center;
-        }
-    }
-    &__title {
-        @include line_clamp(2);
-        font-size: 69px;
-        line-height: 1;
-        color: $blue-800;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        @include r($r-xl) {
-            font-size: 55px
-        }
-        @include r($r-l) {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-        @include r($r-s) {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        @include r($r-xs) {
-            font-size: 22px
-        }
-    }
-    &__text {
-        @include line_clamp(2);
-        font-weight: 400;
-        color: $blue-650;
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 40px;
-        max-width: 370px;
-        @include r($r-l) {
-            margin: 20px auto;
-            max-width: 350px;
-        }
-        @include r($r-xs) {
-            font-size: 16px;
-        }
-    }
-    &__link {
-        background-color: $blue-350;
-        color: $white;
-        padding: 25px 100px 25px 28px;
-        border: none;
-        outline: transparent;
-        position: relative;
-        transition: background-color 0.5s;
-        &:hover {
-            background-color: $blue-400;
-        }
-        &:active {
-            background-color: $blue-700;
-        }
-        &::after {
-            content: url(../images/sprite.svg#slider__arrow);
-            position: absolute;
-            width: 22px;
-            height: 9px;
-            right: 15px;
-        }
-        @include r($r-l) {
-            padding: 15px 100px 15px 28px;
-        }
-        @include r($r-s) {
-            padding: 5px 70px 5px 10px;
-        }
-        @include r($r-xs) {
-            padding: 5px 50px 5px 10px;
-        }
-    }
-    .slick-dots {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        bottom: 45px;
-        left: 0;
-        right: 0;
-        li:not(:last-child) {
-            margin-right: 10px;
-        }
-        button {
-            background-color: $white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            font-size: 15px;
-            padding: 0;
-            border: none;
-            outline: 0;
-            cursor: pointer;
-            position: relative;
-            opacity: 0.5;
-            transition: box-shadow 0.3s;
-            &:focus {
-                background-color: $yellow-500;
-            }
-            &:hover {
-                box-shadow: 0 0 10px 5px $gray-600;
-            }
-            @include r($r-xs) {
-                width: 20px;
-                height: 20px;
-                font-size: 12px;
-            }
-        }
-        .slick-active>button {
-            opacity: 1;
-        }
-        @include r($r-l) {
-            bottom: 20px;
-        }
-        @include r($r-m) {
-            bottom: 10px;
-        }
-    }
-    &__img {
-        z-index: 10;
-        object-fit: contain;
-        position: relative;
-        @include r($r-l) {
-            max-width: 350px;
-        }
-        @include r($r-m) {
-            display: none;
-            width: 0;
-            height: 0;
-        }
-    }
-}
+ .hero {
+     @extend %rubik-500;
+     @include r($r-l) {
+         margin-top: 130px;
+     }
+     @include r($r-m) {
+         margin-top: 55px;
+     }
+     &__inner {
+         height: 89vh;
+         background-color: $yellow-800;
+         padding: 10px;
+     }
+     &__item {
+         height: 90vh;
+         display: flex !important;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         @include r($r-l) {
+             height: 70vh;
+             padding-top: 20px;
+             flex-direction: column;
+         }
+         @include r($r-s) {
+             justify-content: center;
+             padding-top: 0;
+         }
+         &::after {
+             content: "";
+             position: absolute;
+             background-image: linear-gradient(to right, $yellow-800, $white);
+             width: 71vh;
+             height: 71vh;
+             border-radius: 50%;
+             right: 3%;
+             bottom: 25px;
+             @include r($r-xxl) {
+                 display: none;
+                 width: 0;
+                 height: 0;
+             }
+         }
+     }
+     &__content {
+         width: 30%;
+         padding-top: 55px;
+         @include r($r-l) {
+             width: 100%;
+             padding-top: 0;
+             text-align: center
+         }
+         @include r($r-m) {
+             margin-bottom: 15px;
+         }
+     }
+     &__title {
+         @include line_clamp(2);
+         font-size: 69px;
+         line-height: 1;
+         color: $blue-800;
+         text-transform: uppercase;
+         margin-bottom: 40px;
+         @include r($r-xl) {
+             font-size: 55px
+         }
+         @include r($r-l) {
+             font-size: 45px;
+             margin-bottom: 15px;
+         }
+         @include r($r-m) {
+             font-size: 35px;
+             margin-bottom: 10px;
+         }
+     }
+     &__text {
+         @include line_clamp(2);
+         font-weight: 400;
+         color: $blue-650;
+         font-size: 18px;
+         line-height: 1.6;
+         margin-bottom: 40px;
+         max-width: 370px;
+         @include r($r-l) {
+             max-width: 350px;
+             margin: 0 auto;
+             margin-bottom: 20px;
+         }
+         @include r($r-s) {
+             font-size: 16px;
+         }
+     }
+     &__link {
+         background-color: $blue-350;
+         color: $white;
+         padding: 25px 100px 25px 28px;
+         border: none;
+         outline: transparent;
+         position: relative;
+         transition: background-color 0.5s;
+         &:hover {
+             background-color: $blue-400;
+         }
+         &:active {
+             background-color: $blue-700;
+         }
+         &::after {
+             content: url(../images/sprite.svg#slider__arrow);
+             position: absolute;
+             width: 22px;
+             height: 9px;
+             right: 15px;
+         }
+         @include r($r-l) {
+             padding: 15px 100px 15px 28px;
+         }
+     }
+     .slick-dots {
+         position: absolute;
+         display: flex;
+         justify-content: center;
+         bottom: 45px;
+         left: 0;
+         right: 0;
+         li:not(:last-child) {
+             margin-right: 10px;
+         }
+         button {
+             background-color: $white;
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             font-size: 15px;
+             padding: 0;
+             border: none;
+             outline: 0;
+             cursor: pointer;
+             position: relative;
+             opacity: 0.5;
+             transition: box-shadow 0.3s;
+             &:focus {
+                 background-color: $yellow-500;
+             }
+             &:hover {
+                 box-shadow: 0 0 10px 5px $gray-600;
+             }
+             @include r($r-s) {
+                 width: 20px;
+                 height: 20px;
+                 font-size: 12px;
+             }
+         }
+         .slick-active>button {
+             opacity: 1;
+         }
+         @include r($r-l) {
+             bottom: 20px;
+         }
+         @include r($r-m) {
+             bottom: 10px;
+         }
+         @include r($r-s) {
+             bottom: 5px;
+         }
+     }
+     &__img {
+         z-index: 10;
+         object-fit: contain;
+         position: relative;
+         @include r($r-l) {
+             height: 30vh;
+             max-width: 50%;
+         }
+         @include r($r-m) {
+             height: 20vh;
+             max-width: 50%;
+         }
+     }
+ }

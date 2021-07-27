@@ -35,6 +35,7 @@ $gray-550:#b3b7b5;
 $gray-500:#c9bebe;
 $gray-450:#e0e0e0;
 $gray-400:#f8f8f8;
+$gray-350:#f6f6f6;
 
 /* YELLOW */
 
@@ -90,11 +91,11 @@ $yellow-500:#f8f3ee;
     overflow: hidden;
 }
 
-$r-xl: 1366;
+$r-xxl: 1600;
+$r-xl: 1200;
 $r-l: 992;
 $r-m: 768;
 $r-s: 576;
-$r-xs: 360;
 @mixin r($width) {
     @media only screen and (max-width: $width + 'px') {
         @content;
@@ -105,6 +106,6 @@ $r-xs: 360;
     @return m#{a}x(#{$numbers});
 }
 
-@function mmin($numbers...) {
+@function min($numbers...) {
     @return m#{i}x(#{$numbers});
 }

@@ -1,18 +1,20 @@
 .footer {
     @extend %rubik-400;
     color: $gray-900;
+    padding-top: 70px;
     &__inner {
         display: flex;
+        justify-content: space-between;
+        margin-left: auto;
         padding-bottom: 58px;
         border-bottom: 2px solid $gray-650;
         @include r($r-m) {
             flex-wrap: wrap;
-            justify-content: center;
         }
     }
     &__address {
+        max-width: 368px;
         font-style: normal;
-        max-width: 215px;
     }
     &__logo {
         margin-bottom: 20px;
@@ -23,8 +25,8 @@
     &__nav {
         display: flex;
         justify-content: space-evenly;
-        width: 58%;
-        padding-top: 18px;
+        width: 100%;
+        padding-top: 12px;
     }
     &__package {
         &--services {
@@ -56,7 +58,10 @@
         }
     }
     &__block {
-        padding-top: 18px;
+        padding-top: 12px;
+        @include r($r-s) {
+            text-align: center;
+        }
     }
     &__text {
         @include line_clamp(2);

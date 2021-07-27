@@ -1,19 +1,15 @@
 .video {
     cursor: pointer;
-    height: 500px;
+    height: 50vh;
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 85px;
     position: relative;
     @include r($r-s) {
-        height: 400px;
-        margin-bottom: 50px;
-    }
-    @include r($r-xs) {
-        height: 300px;
+        height: 30vh;
         margin-bottom: 30px;
     }
     &:hover &__link {
@@ -33,7 +29,7 @@
         border-radius: 50%;
         transition: background-color 0.5s, box-shadow 0.7s;
         z-index: 10;
-        @include r($r-xs) {
+        @include r($r-s) {
             width: 50px;
             height: 50px;
         }
@@ -55,7 +51,7 @@
         width: 25px;
         height: 25px;
         z-index: 10;
-        @include r($r-xs) {
+        @include r($r-s) {
             width: 15px;
             height: 20px;
         }
