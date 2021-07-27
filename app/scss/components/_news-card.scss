@@ -6,6 +6,9 @@
         max-height: 250px;
         width: 100%;
     }
+    &__img {
+        object-fit: cover;
+    }
     &__news {
         @extend %poppins-700;
         font-size: 14px;
@@ -64,16 +67,22 @@
         @include r($r-m) {
             padding-left: 25px;
         }
+        @include r($r-m) {
+            padding-left: 0;
+            justify-content: space-evenly;
+        }
     }
     &__admin {
         position: relative;
         &::before {
             content: "";
+            position: absolute;
             background-image: url(../images/sprite.svg#user);
             left: -20px;
         }
         &--calendar::before {
             content: "";
+            position: absolute;
             background-image: url(../images/sprite.svg#calendar);
             left: 30px;
             @include r($r-m) {

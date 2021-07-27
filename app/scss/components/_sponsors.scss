@@ -1,5 +1,6 @@
 .sponsors {
     padding: 85px 0 80px;
+    background-color: $yellow-750;
     @include r($r-l) {
         padding: 40px 0;
     }
@@ -18,13 +19,15 @@
         object-fit: contain;
         @include r($r-l) {
             width: 115px;
+            margin: 0 auto;
         }
         @include r($r-m) {
             height: 70px;
             width: 70px;
         }
         @include r($r-s) {
-            width: 50px;
+            height: 90px;
+            width: 170px;
         }
     }
     .slick-track {

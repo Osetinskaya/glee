@@ -1,11 +1,7 @@
 .insights {
     position: relative;
     color: $gray-900;
-    margin-bottom: 80px;
     @include r($r-s) {
-        margin-bottom: 50px;
-    }
-    @include r($r-xs) {
         margin-bottom: 20px;
     }
     &__title {
@@ -35,8 +31,8 @@
         justify-content: space-between;
         align-items: baseline;
         padding-right: 25px;
-        margin-bottom: 35px;
-        @include r($r-xs) {
+        margin-bottom: 30px;
+        @include r($r-s) {
             margin-bottom: 20px;
         }
     }
@@ -52,9 +48,6 @@
         transition: border-bottom 0.3s, opacity 0.5s;
         cursor: pointer;
         @include r($r-s) {
-            font-size: 14px;
-        }
-        @include r($r-xs) {
             font-size: 12px;
         }
         &::after {
@@ -66,7 +59,7 @@
             position: absolute;
             top: 7px;
             right: -20px;
-            @include r($r-xs) {
+            @include r($r-s) {
                 top: 5px;
                 right: -15px;
             }
@@ -85,13 +78,20 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+        @include r($r-m) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__item {
         position: relative;
         background-color: $white;
         max-width: 370px;
         padding-bottom: 25px;
+        border-radius: 15px;
         transition: box-shadow 0.5s;
+        box-shadow: 0 0 30px 5px $gray-450;
         @include r($r-l) {
             margin-bottom: 25px;
         }
@@ -102,6 +102,9 @@
             margin-right: 30px;
             @include r($r-l) {
                 margin-right: 20px;
+            }
+            @include r($r-m) {
+                margin-right: 0;
             }
         }
         &:hover {

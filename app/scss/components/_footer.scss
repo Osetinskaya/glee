@@ -1,6 +1,7 @@
 .footer {
     @extend %rubik-400;
     color: $gray-900;
+    padding-top: 70px;
     &__inner {
         display: flex;
         padding-bottom: 58px;
@@ -57,6 +58,9 @@
     }
     &__block {
         padding-top: 18px;
+        @include r($r-s) {
+            text-align: center;
+        }
     }
     &__text {
         @include line_clamp(2);

@@ -1,181 +1,188 @@
-    .products {
-        font-weight: 700;
-        margin-bottom: 95px;
-        @include r($r-l) {
-            margin-bottom: 60px;
-        }
-        &__content {
-            margin-right: -90px;
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 60px;
-            @include r($r-l) {
-                justify-content: center;
-                margin-right: 0;
-            }
-            @include r($r-s) {
-                margin-bottom: 20px;
-            }
-        }
-        &__card {
-            margin-bottom: 40px;
-            @include r($r-xs) {
-                margin-bottom: 10px;
-            }
-            &:not(:last-child) {
-                margin-right: 30px;
-                @include r($r-l) {
-                    margin-right: 20px;
-                }
-                @include r($r-xs) {
-                    margin-right: 10px;
-                }
-            }
-        }
-        .mix-nav {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 74px;
-            @include r($r-l) {
-                margin-bottom: 20px;
-            }
-            &__item {
-                color: $gray-950;
-                opacity: 0.5;
-                font-size: 16px;
-                transition: opacity 0.5s;
-                @include r($r-xs) {
-                    font-size: 14px;
-                }
-                &:not(:last-child) {
-                    margin-right: 18px;
-                    @include r($r-xs) {
-                        margin-right: 0;
-                    }
-                }
-                &:hover {
-                    opacity: 0.7;
-                }
-                &:active,
-                .mixitup-control-active {
-                    opacity: 0.3;
-                }
-            }
-            &__btn {
-                cursor: pointer;
-                background-color: $white;
-                outline: transparent;
-                border: 0;
-            }
-        }
-    }
-    
-    .product-card {
-        $this: &;
-        width: 277px;
-        border-radius: 10px;
-        background-color: $white;
-        box-shadow: 0 0 35px 5px $gray-400;
-        position: relative;
-        @include r($r-m) {
-            width: 250px;
-        }
-        @include r($r-s) {
-            width: 200px;
-        }
-        @include r($r-xs) {
-            width: 132px;
-        }
-        &:hover &__tool {
-            opacity: 1;
-        }
-        &__body {
-            padding: 30px 20px 15px;
-        }
-        &__img {
-            margin: 0 auto 53px;
-            height: 200px;
-            width: 100%;
-            object-fit: contain;
-            @include r($r-s) {
-                margin-bottom: 0;
-            }
-        }
-        &__text {
-            text-align: center;
-            line-height: 2.4;
-        }
-        &__name {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            font-weight: 500;
-            font-size: 16px;
-            color: $blue-800;
-            @include r($r-xs) {
-                font-size: 14px;
-            }
-        }
-        &__cost {
-            font-weight: 700;
-        }
-        &__tool {
-            display: flex;
-            position: absolute;
-            top: 50%;
-            left: 20%;
-            opacity: 0;
-            transition: opacity 0.7s;
-            @include r($r-s) {
-                left: 8%;
-            }
-            @include r($r-s) {
-                left: 5%;
-            }
-        }
-        &__item {
-            position: relative;
-            margin-right: 15px;
-        }
-        &__link {
-            display: block;
-            width: 45px;
-            height: 45px;
-            background-color: $white;
-            box-shadow: 0 0 15px 3px $gray-450;
-            background-position: center center;
-            border-radius: 50%;
-            border: 0;
-            outline: 0;
-            cursor: pointer;
-            transition: background-color 0.5s;
-            @include r($r-xs) {
-                width: 30px;
-                height: 30px;
-            }
-            &:hover {
-                background-color: $blue-200;
-                #{$this}__icon {
-                    fill: $white;
-                }
-            }
-            &:active {
-                background-color: $blue-500;
-                #{$this}__icon {
-                    fill: $white;
-                }
-            }
-        }
-        &__icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            transition: opacity 0.5s;
-            fill: $blue-350;
-            z-index: 10;
-        }
-    }
+ .products {
+     font-weight: 700;
+     margin-bottom: 95px;
+     @include r($r-l) {
+         margin-bottom: 60px;
+     }
+     &__content {
+         margin-bottom: 35px;
+         display: flex;
+         flex-wrap: wrap;
+         margin-right: -30px;
+         @include r($r-xl) {
+             justify-content: center;
+             margin-right: 0;
+         }
+         @include r($r-m) {
+             margin-bottom: 20px;
+         }
+     }
+     &__card {
+         width: calc((100% / 4) - 30px);
+         margin-bottom: 40px;
+         @include r($r-m) {
+             width: calc((100% / 2) - 50px);
+             display: flex;
+             justify-content: center;
+         }
+         @include r($r-s) {
+             width: 100%;
+             margin-bottom: 10px;
+         }
+         &:not(:last-child) {
+             margin-right: 30px;
+             @include r($r-m) {
+                 margin-right: 0;
+             }
+         }
+     }
+     .mix-nav {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         margin-bottom: 74px;
+         @include r($r-l) {
+             margin-bottom: 20px;
+         }
+         &__item {
+             color: $gray-950;
+             opacity: 0.5;
+             font-size: 16px;
+             transition: opacity 0.5s;
+             @include r($r-s) {
+                 font-size: 14px;
+             }
+             &:not(:last-child) {
+                 margin-right: 18px;
+                 @include r($r-s) {
+                     margin-right: 0;
+                 }
+             }
+             &:hover {
+                 opacity: 0.7;
+             }
+             &:active,
+             .mixitup-control-active {
+                 opacity: 0.3;
+             }
+         }
+         &__btn {
+             cursor: pointer;
+             background-color: $white;
+             outline: transparent;
+             border: 0;
+         }
+     }
+ }
+ 
+ .product-card {
+     $this: &;
+     max-width: 280px;
+     border-radius: 10px;
+     background-color: $white;
+     box-shadow: 0 0 35px 5px $gray-400;
+     position: relative;
+     @include r($r-m) {
+         width: 250px;
+     }
+     @include r($r-s) {
+         width: 200px;
+     }
+     &:hover &__tool {
+         opacity: 1;
+     }
+     &__body {
+         padding: 30px 20px 15px;
+     }
+     &__img {
+         margin: 0 auto 53px;
+         height: 20vh;
+         width: 100%;
+         object-fit: contain;
+         @include r($r-l) {
+             height: 15vh;
+             margin-bottom: 20px;
+         }
+         @include r($r-s) {
+             margin-bottom: 0;
+         }
+     }
+     &__text {
+         text-align: center;
+         line-height: 2.4;
+     }
+     &__name {
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;
+         font-weight: 500;
+         font-size: 16px;
+         color: $blue-800;
+         @include r($r-s) {
+             font-size: 14px;
+         }
+     }
+     &__cost {
+         font-weight: 700;
+     }
+     &__tool {
+         display: flex;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         opacity: 0;
+         transition: opacity 0.7s;
+         @include r($r-m) {
+             opacity: 1;
+             top: 44%;
+         }
+     }
+     &__item {
+         position: relative;
+         &:not(:last-child) {
+             margin-right: 15px;
+         }
+     }
+     &__link {
+         display: block;
+         width: 45px;
+         height: 45px;
+         background-color: $white;
+         box-shadow: 0 0 15px 3px $gray-450;
+         background-position: center center;
+         border-radius: 50%;
+         border: 0;
+         outline: 0;
+         cursor: pointer;
+         transition: background-color 0.5s;
+         @include r($r-l) {
+             width: 35px;
+             height: 35px;
+         }
+         &:hover {
+             background-color: $blue-200;
+             #{$this}__icon {
+                 fill: $white;
+             }
+         }
+         &:active {
+             background-color: $blue-500;
+             #{$this}__icon {
+                 fill: $white;
+             }
+         }
+     }
+     &__icon {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         display: inline-block;
+         width: 25px;
+         height: 25px;
+         transition: opacity 0.5s;
+         fill: $blue-350;
+         z-index: 10;
+     }
+ }
