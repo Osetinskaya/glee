@@ -8,6 +8,8 @@
     }
     &__img {
         object-fit: cover;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
     }
     &__news {
         @extend %poppins-700;
@@ -52,7 +54,7 @@
             border-bottom: 1px solid $gray-450;
             bottom: 0;
             @include r($r-m) {
-                max-width: 225px;
+                max-width: 250px;
             }
         }
     }
@@ -72,19 +74,15 @@
             justify-content: space-evenly;
         }
     }
-    &__admin {
+    &__info {
         position: relative;
         &::before {
             content: "";
-            position: absolute;
             background-image: url(../images/sprite.svg#user);
-            left: -20px;
         }
         &--calendar::before {
             content: "";
-            position: absolute;
             background-image: url(../images/sprite.svg#calendar);
-            left: 30px;
             @include r($r-m) {
                 left: 5px;
             }
@@ -95,6 +93,7 @@
             background-repeat: no-repeat;
             width: 15px;
             height: 15px;
+            left: -20px;
         }
     }
 }

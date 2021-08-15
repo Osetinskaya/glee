@@ -4,43 +4,6 @@
      @include r($r-l) {
          margin-bottom: 60px;
      }
-     .mix-nav {
-         display: flex;
-         justify-content: center;
-         flex-wrap: wrap;
-         margin-bottom: 74px;
-         @include r($r-l) {
-             margin-bottom: 20px;
-         }
-         &__item {
-             color: $gray-950;
-             opacity: 0.5;
-             font-size: 16px;
-             transition: opacity 0.5s;
-             @include r($r-s) {
-                 font-size: 14px;
-             }
-             &:not(:last-child) {
-                 margin-right: 18px;
-                 @include r($r-s) {
-                     margin-right: 0;
-                 }
-             }
-             &:hover {
-                 opacity: 0.7;
-             }
-             &:active,
-             .mixitup-control-active {
-                 opacity: 0.3;
-             }
-         }
-         &__btn {
-             cursor: pointer;
-             background-color: $white;
-             outline: transparent;
-             border: 0;
-         }
-     }
      &__content {
          margin-bottom: 27px;
          display: flex;

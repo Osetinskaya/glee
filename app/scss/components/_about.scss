@@ -1,10 +1,64 @@
+.top {
+    margin: 130px 0 115px;
+    background-color: $blue-150;
+    width: 100%;
+    padding: 30px 0 36px;
+    @include r($r-xl) {
+        margin-bottom: 0;
+    }
+    @include r($r-m) {
+        margin: 115px 0 0;
+    }
+    @include r($r-m) {
+        margin-bottom: 10px;
+    }
+    &__title {
+        @extend %rubik-400;
+        margin-bottom: 0;
+        line-height: 1.2;
+        &--log {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    color: $gray-700;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 20px;
+            &::after {
+                content: "/";
+                position: absolute;
+                right: -12px;
+            }
+        }
+    }
+}
+
 .company {
     &__inner {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         color: $blue-800;
-        padding: 120px 0;
+        margin-bottom: 117px;
+        margin-right: -55px;
+        @include r($r-xl) {
+            justify-content: space-evenly;
+        }
+        @include r($r-l) {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+        @include r($r-s) {
+            margin-bottom: 20px;
+        }
     }
     &__img {
         background-repeat: no-repeat;
@@ -12,34 +66,97 @@
         z-index: 1;
         width: 570px;
         height: 685px;
+        @include r($r-xl) {
+            width: 420px;
+        }
+        @include r($r-l) {
+            display: none;
+        }
     }
     &__annotation {
-        width: 45%;
+        padding-top: 40px;
+        width: 50%;
+        @include r($r-l) {
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 0;
+            text-align: center;
+        }
+        @include r($r-s) {
+            width: 100%;
+        }
     }
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        text-align: left;
+        @include r($r-xl) {
+            margin-bottom: 10px;
+        }
+        @include r($r-l) {
+            text-align: center;
+        }
+        @include r($r-s) {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
     }
     &__text {
-        @include line_clamp(4);
-        margin-bottom: 60px;
+        @include line_clamp(10);
+        max-width: 570px;
+        margin-bottom: 105px;
+        @include r($r-xl) {
+            max-width: 480px;
+            margin-bottom: 60px;
+        }
+        @include r($r-l) {
+            margin: 0 auto;
+            margin-bottom: 55px;
+        }
+        @include r($r-s) {
+            margin-bottom: 20px;
+        }
     }
 }
 
 .experience {
-    @extend %rubik-400;
+    @extend %rubik-500;
     display: flex;
     align-items: center;
     max-width: 270px;
+    margin-bottom: 10px;
+    @include r($r-l) {
+        margin: 0 auto;
+    }
+    @include r($r-m) {
+        margin-bottom: 20px;
+    }
+    @include r($r-s) {
+        display: block;
+    }
     &__years {
+        padding-top: 20px;
+        padding-left: 25px;
         font-size: 140px;
-        font-weight: 900;
         color: $blue-350;
-        margin-right: 30px;
+        margin-right: 10px;
+        line-height: 1.1;
+        @include r($r-s) {
+            font-size: 60px;
+            font-size: 60px;
+            padding: 0;
+        }
     }
     &__text {
-        padding-top: 25px;
+        padding-top: 40px;
         color: $blue-800;
         line-height: 1.9;
+        @include r($r-m) {
+            padding-top: 0;
+            font-size: 28px;
+        }
+        @include r($r-s) {
+            padding-top: 0;
+        }
     }
 }
 
@@ -55,8 +172,17 @@
         height: 1px;
         width: 500px;
         border-bottom: 1px solid $gray-450;
-        bottom: 80px;
-        left: -30px;
+        bottom: 100px;
+        left: -70px;
+        @include r($r-xl) {
+            left: 0;
+        }
+        @include r($r-l) {
+            width: 100%;
+        }
+        @include r($r-s) {
+            display: none;
+        }
     }
     &__item {
         position: relative;
@@ -71,6 +197,13 @@
                 color: $gray-450;
                 bottom: 0;
                 right: -50%;
+                @include r($r-m) {
+                    right: 0;
+                    left: 135px;
+                }
+                @include r($r-s) {
+                    border-right: none;
+                }
             }
         }
         &--projects {
@@ -101,8 +234,11 @@
             background-repeat: no-repeat;
             height: 40px;
             width: 40px;
-            left: -45px;
+            left: -75px;
             bottom: 15px;
+            @include r($r-xl) {
+                display: none;
+            }
         }
     }
     &__num {
@@ -110,17 +246,32 @@
         font-size: 36px;
         line-height: 1;
         position: relative;
+        @include r($r-s) {
+            font-size: 27px;
+        }
     }
 }
 
 .statistik {
     background-color: $yellow-850;
-    padding: 90px 0 80px;
+    padding: 90px 0 79px;
     color: $blue-900;
+    margin-bottom: 110px;
+    @include r($r-l) {
+        padding: 30px 0;
+        margin-bottom: 50px;
+    }
+    @include r($r-s) {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
     &__items {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
+        @include r($r-s) {
+            text-align: center;
+        }
     }
     &__item {
         max-width: 200px;
@@ -138,6 +289,9 @@
             height: 35px;
             right: 30px;
             bottom: 80px;
+            @include r($r-l) {
+                display: none;
+            }
         }
         &--clients {
             &::after {
@@ -149,10 +303,21 @@
         width: 80px;
         height: 60px;
         fill: $blue-900;
+        @include r($r-m) {
+            width: 40px;
+            height: 30px;
+        }
     }
     &__number {
         font-size: 36px;
         font-weight: 600;
+        @include r($r-l) {
+            font-size: 30px;
+            line-height: 1.1;
+        }
+        @include r($r-s) {
+            font-size: 28px;
+        }
     }
     &__text {
         font-size: 18px;
@@ -161,30 +326,46 @@
 }
 
 .team {
-    padding: 120px 0 120px;
+    margin-bottom: 65px;
     color: $blue-800;
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include r($r-l) {
+            display: block;
+        }
     }
     &__about {
-        width: 40%;
-        @include line_clamp(10);
+        max-width: 388px;
+        @include line_clamp(15);
+        @include r($r-l) {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
     }
     &__title {
-        margin-bottom: 35px;
         text-align: left;
+        @include r($r-l) {
+            text-align: center;
+        }
     }
     &__text {
         max-width: 70%;
-        margin-bottom: 40px;
+        line-height: 1.9;
+        margin-bottom: 50px;
+        @include r($r-l) {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
     }
     &__link {
         background-color: $blue-350;
         color: $white;
-        padding: 20px 60px 20px 25px;
+        padding: 20px 60px 20px 15px;
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         outline: transparent;
         position: relative;
         transition: background-color 0.5s;
@@ -202,21 +383,34 @@
             right: 15px;
         }
     }
-    &__items {
+    &__list {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-        width: 70%;
-        margin-right: -150px;
+        margin-right: -40px;
+        padding-top: 10px;
+        @include r($r-s) {
+            margin-right: 0;
+        }
     }
     &__item {
         position: relative;
         margin-right: 30px;
         margin-bottom: 100px;
+        @include r($r-s) {
+            margin-right: 15px;
+            margin-bottom: 90px;
+            box-shadow: 0 0 15px 5px $gray-450;
+        }
     }
     &__img {
-        width: 320px;
+        width: 370px;
         height: 320px;
-        object-fit: contain;
+        object-fit: cover;
+        @include r($r-xl) {
+            width: 270px;
+            height: 270px;
+        }
     }
     &__btn {
         position: relative;
@@ -248,10 +442,21 @@
     }
     &__info {
         position: absolute;
-        width: 260px;
-        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 326px;
+        padding: 24px 23px;
         background-color: $white;
         bottom: -55px;
+        left: -1px;
+        @include r($r-xl) {
+            width: 101%;
+        }
+        @include r($r-s) {
+            padding: 5px;
+            box-shadow: 0px 12px 15px 5px $gray-450;
+        }
     }
     &__information {
         width: 135px;
@@ -260,5 +465,8 @@
     }
     &__name {
         color: $blue-700;
+    }
+    &__social {
+        display: flex;
     }
 }
