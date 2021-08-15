@@ -78,7 +78,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        @include r($r-m) {
+        @include r($r-s) {
             flex-wrap: nowrap;
             flex-direction: column;
             align-items: center;
@@ -96,14 +96,14 @@
             margin-bottom: 25px;
         }
         @include r($r-m) {
-            max-width: 250px;
+            max-width: 320px;
         }
         &:not(:last-child) {
             margin-right: 30px;
-            @include r($r-l) {
+            @include r($r-m) {
                 margin-right: 20px;
             }
-            @include r($r-m) {
+            @include r($r-s) {
                 margin-right: 0;
             }
         }

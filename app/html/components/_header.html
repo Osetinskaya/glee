@@ -1,0 +1,85 @@
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <nav class="menu">
+                <a class="logo header__logo" href="#">
+                    <img loading="lazy" class="logo__img" width="145" height="40" src="images/logo.png" alt="logo">
+                </a>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="Log__in.html">Home</a>
+                        <span class="menu__link-down">+</span>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="about.html">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Pages</a>
+                        <span class="menu__link-down">+</span>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">News</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <button class="icons__link icons__link--search">
+                    <svg class="icons__svg">
+                        <use xlink:href="images/sprite.svg#products__search"></use>
+                    </svg>
+                    <span class="sr-only">Search by page</span>
+                </button>
+
+                    <button class="icons__link icons__link--like">
+                        <svg class="icons__svg icons__svg--purchase">
+                            <use xlink:href="images/sprite.svg#products__like"></use>
+                        </svg>
+                        <span class="sr-only">Favorite products</span>
+                        <span class="icons__num">0</span>
+                    </button>
+                    <button class="icons__link icons__link--card">
+                        <svg class="icons__svg icons__svg--purchase">
+                            <use xlink:href="images/sprite.svg#products__card"></use>
+                        </svg>
+                        <span class="sr-only">basket of goods</span>
+                        <span class="icons__num">0</span>
+                    </button>
+
+                    <button class="icons__link icons__link--grid">
+                    <svg class="icons__svg">
+                        <use xlink:href="images/sprite.svg#products__grid"></use>
+                    </svg>
+                    <span class="sr-only">Available applications</span>
+                </button>
+                </div>
+            </nav>
+        </div>
+        <div class="header__btn">
+            <button class="header__menu">
+            <svg class="header__nav">
+                <use xlink:href="images/sprite.svg#menu__btn"></use>
+            </svg>
+            <span class="sr-only">Open menu</span>
+        </button>
+            <form class="header__form" action="#">
+                <label for="address" class="header__label">
+                <span class="sr-only">find</span>
+            </label>
+                <input class="header__input" id="search" type="search" placeholder="Find" name="find" required>
+                <button class="header__find">
+                    <svg class="header__svg">
+                        <use xlink:href="images/sprite.svg#products__search"></use>
+                    </svg>
+                    <span class="sr-only">Search by page</span>
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</header>
