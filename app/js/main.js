@@ -1,14 +1,72 @@
 $(function() {
 
+    $('.price__input').ionRangeSlider({
+        type: "number",
+        prefix: "$",
+        step = '0.01',
+        value = '0.00',
 
+        prettify_separator: ","
+
+    })
+
+    $(".furniture__stars").rateYo({
+        rating: 3.6,
+        readOnly: true,
+        starWidth: "18px",
+        normalFill: "#d6d6d6",
+        ratedFill: "#ffcc00"
+    });
+
+    $(".recent__stars").rateYo({
+        starWidth: "12px",
+        readOnly: true,
+        normalFill: "#d6d6d6",
+        ratedFill: "#ffcc00"
+    });
+
+
+    /*  КНОПКИ HEADER */
 
     $('.header__menu').on('click', function() {
         $('.menu__list').toggleClass('menu__list--active');
     });
-
     $('.header__menu').on('click', function() {
         $('.header__menu').toggleClass('header__menu--back');
     });
+
+    /* КНОПКИ ДОБАВЛЕНИЯ В КОРЗИНУ "ADD TO CARD" */
+
+    $('.buttons__add').on('click', function() {
+        $('.buttons__add').toggleClass('buttons__add--done');
+    });
+    $('.buttons__add').on('click', function() {
+        $('.buttons__append').toggleClass('buttons__append--add');
+    });
+
+    $('.buttons__add').on('click', function() {
+        $('.buttons__card').toggleClass('buttons__card--change');
+    });
+    /* КНОПКИ ОТКРЫТИЯ ФИЛЬТРОВ */
+    $('.shop__menu').on('click', function() {
+        $('.filters').toggleClass('filters--active');
+    });
+    $('.shop__menu').on('click', function() {
+        $('.shop__menu').toggleClass('shop__menu--back');
+    });
+
+    /* КНОПКИ СМЕНЫ ПРЕДСТАВЛЕНИЯ ТОВАРОВ */
+
+    $('.sorting__btn--grid').on('click', function() {
+        $('.grid').addClass('grid--active')
+        $('.list').removeClass('list--active');
+    });
+    $('.sorting__btn--line').on('click', function() {
+        $('.list').addClass('list--active')
+        $('.grid').removeClass('grid--active');
+    });
+
+
 
     $(".menu a").on("click", function(event) {
         //отменяем стандартную обработку нажатия по ссылке
@@ -70,32 +128,6 @@ $(function() {
         ]
     });
 
-
-    /*   var containerEl1 = document.querySelector('[data-ref="products__content"]');
-      var containerEl2 = document.querySelector('[data-ref="design__content"]');
-
-
-
-      $(function() {
-          var mixer1 = mixitup('.products__content', {
-              controls: {
-                  scope: 'local'
-              }
-          });
-
-          var mixer2 = mixitup('.design__content', {
-              controls: {
-                  scope: 'local'
-              }
-          });
-      });
-
-
-
-      var mixer1 = mixitup('.products__content');
-      var mixer2 = mixitup('.design__content'); */
-
-
     var containerEl1 = document.querySelector('[data-ref="products__gallery"]');
     var containerEl2 = document.querySelector('[data-ref="design__gallery"]');
 
@@ -107,6 +139,8 @@ $(function() {
 
     var mixer1 = mixitup(containerEl1, config);
     var mixer2 = mixitup(containerEl2, config);
+
+
 
 
 

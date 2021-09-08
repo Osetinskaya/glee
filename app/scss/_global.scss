@@ -78,6 +78,50 @@ body {
     }
 }
 
+.top {
+    margin: 130px 0 115px;
+    background-color: $blue-150;
+    width: 100%;
+    padding: 30px 0 36px;
+    @include r($r-xl) {
+        margin-bottom: 0;
+    }
+    @include r($r-l) {
+        margin: 115px 0 20px;
+    }
+    @include r($r-m) {
+        margin-bottom: 10px;
+    }
+    &__title {
+        @extend %rubik-400;
+        margin-bottom: 0;
+        line-height: 1.2;
+        &--log {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    color: $gray-700;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 20px;
+            &::after {
+                content: "/";
+                position: absolute;
+                right: -12px;
+            }
+        }
+    }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
