@@ -1,4 +1,5 @@
- .products {
+ .products,
+ .grid {
      font-weight: 700;
      margin-bottom: 83px;
      @include r($r-l) {
@@ -38,7 +39,8 @@
      }
  }
  
- .product-card {
+ .product-card,
+ .grid-card {
      $this: &;
      max-width: 280px;
      border-radius: 10px;
@@ -87,6 +89,12 @@
      }
      &__cost {
          font-weight: 700;
+         display: inline;
+         position: relative;
+         span {
+             position: absolute;
+             left: -10px;
+         }
      }
      &__tool {
          display: flex;
@@ -96,8 +104,10 @@
          transform: translate(-50%, -50%);
          opacity: 0;
          transition: opacity 0.7s;
-         @include r($r-m) {
+         @include r($r-l) {
              opacity: 1;
+         }
+         @include r($r-m) {
              top: 44%;
          }
      }

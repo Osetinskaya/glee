@@ -17,8 +17,11 @@
         @include r($r-l) {
             height: 400px;
         }
+        @include r($r-m) {
+            height: 350px;
+        }
         @include r($r-s) {
-            height: 240px;
+            height: 300px;
         }
     }
     &__item {
@@ -35,11 +38,10 @@
         @include r($r-l) {
             height: 350px;
             padding-top: 20px;
-            justify-content: space-around;
+            justify-content: flex-start;
         }
         @include r($r-s) {
-            height: 300px;
-            justify-content: center;
+            height: 280px;
             padding-top: 0;
         }
         &::after {
@@ -194,15 +196,17 @@
         object-fit: contain;
         position: relative;
         @include r($r-xl) {
-            max-width: 50%;
+            height: 30vh;
+            max-width: 40%;
         }
         @include r($r-l) {
-            height: 30vh;
             max-width: 50%;
         }
         @include r($r-m) {
+            height: 11vh;
+        }
+        @include r($r-s) {
             height: 20vh;
-            max-width: 50%;
         }
     }
 }

@@ -1,82 +1,31 @@
-.top {
-    margin: 130px 0 115px;
-    background-color: $blue-150;
-    width: 100%;
-    padding: 30px 0 36px;
-    @include r($r-xl) {
-        margin-bottom: 0;
-    }
-    @include r($r-m) {
-        margin: 115px 0 0;
-    }
-    @include r($r-m) {
-        margin-bottom: 10px;
-    }
-    &__title {
-        @extend %rubik-400;
-        margin-bottom: 0;
-        line-height: 1.2;
-        &--log {
-            text-transform: uppercase;
-        }
-    }
-}
-
-.breadcrumbs {
-    display: flex;
-    justify-content: center;
-    color: $gray-700;
-    &__list {
-        display: flex;
-    }
-    &__item {
-        position: relative;
-        &:not(:last-child) {
-            margin-right: 20px;
-            &::after {
-                content: "/";
-                position: absolute;
-                right: -12px;
-            }
-        }
-    }
-}
-
 .company {
     &__inner {
-        display: flex;
-        justify-content: space-between;
         color: $blue-800;
         margin-bottom: 117px;
         margin-right: -55px;
-        @include r($r-xl) {
-            justify-content: space-evenly;
-        }
-        @include r($r-l) {
-            margin-right: 0;
-            margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &::before {
+            content: url("../images/about__us/company.jpg");
+            position: relative;
+            max-width: 570px;
+            height: 685px;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            z-index: 1;
+            @include r($r-xl) {
+                display: none;
+            }
         }
         @include r($r-s) {
-            margin-bottom: 20px;
-        }
-    }
-    &__img {
-        background-repeat: no-repeat;
-        object-fit: contain;
-        z-index: 1;
-        width: 570px;
-        height: 685px;
-        @include r($r-xl) {
-            width: 420px;
-        }
-        @include r($r-l) {
-            display: none;
+            margin-bottom: 40px;
         }
     }
     &__annotation {
         padding-top: 40px;
         width: 50%;
-        @include r($r-l) {
+        @include r($r-xl) {
             width: 70%;
             margin: 0 auto;
             padding-top: 0;
@@ -84,6 +33,7 @@
         }
         @include r($r-s) {
             width: 100%;
+            text-align: left;
         }
     }
     &__title {
@@ -96,8 +46,9 @@
             text-align: center;
         }
         @include r($r-s) {
-            font-size: 28px;
+            font-size: 20px;
             margin-bottom: 10px;
+            text-align: left;
         }
     }
     &__text {
@@ -109,11 +60,14 @@
             margin-bottom: 60px;
         }
         @include r($r-l) {
-            margin: 0 auto;
             margin-bottom: 55px;
+        }
+        @include r($r-l) {
+            max-width: 300px;
         }
         @include r($r-s) {
             margin-bottom: 20px;
+            text-align: left;
         }
     }
 }
@@ -124,12 +78,6 @@
     align-items: center;
     max-width: 270px;
     margin-bottom: 10px;
-    @include r($r-l) {
-        margin: 0 auto;
-    }
-    @include r($r-m) {
-        margin-bottom: 20px;
-    }
     @include r($r-s) {
         display: block;
     }
@@ -141,7 +89,6 @@
         margin-right: 10px;
         line-height: 1.1;
         @include r($r-s) {
-            font-size: 60px;
             font-size: 60px;
             padding: 0;
         }
@@ -156,6 +103,7 @@
         }
         @include r($r-s) {
             padding-top: 0;
+            font-size: 20px;
         }
     }
 }
@@ -170,7 +118,7 @@
         content: "";
         position: absolute;
         height: 1px;
-        width: 500px;
+        width: 100%;
         border-bottom: 1px solid $gray-450;
         bottom: 100px;
         left: -70px;
@@ -183,6 +131,10 @@
         @include r($r-s) {
             display: none;
         }
+    }
+    @include r($r-l) {
+        margin: 0;
+        max-width: 300px;
     }
     &__item {
         position: relative;
@@ -206,30 +158,8 @@
                 }
             }
         }
-        &--projects {
-            position: relative;
-            &::before {
-                content: "";
-                background-image: url(../images/sprite.svg#projects);
-            }
-        }
-        &--revenue {
-            position: relative;
-            &::before {
-                content: "";
-                background-image: url(../images/sprite.svg#revenue);
-            }
-        }
-        &--awards {
-            position: relative;
-            &::before {
-                content: "";
-                background-image: url(../images/sprite.svg#awards);
-            }
-        }
-        &--projects::before,
-        &--revenue::before,
-        &--awards::before {
+        &::before {
+            content: "";
             position: absolute;
             background-repeat: no-repeat;
             height: 40px;
@@ -238,6 +168,24 @@
             bottom: 15px;
             @include r($r-xl) {
                 display: none;
+            }
+        }
+        &--projects {
+            position: relative;
+            &::before {
+                background-image: url(../images/sprite.svg#projects);
+            }
+        }
+        &--revenue {
+            position: relative;
+            &::before {
+                background-image: url(../images/sprite.svg#revenue);
+            }
+        }
+        &--awards {
+            position: relative;
+            &::before {
+                background-image: url(../images/sprite.svg#awards);
             }
         }
     }
@@ -338,26 +286,26 @@
     &__about {
         max-width: 388px;
         @include line_clamp(15);
+        @include r($r-xl) {
+            margin-left: 30px;
+        }
         @include r($r-l) {
             max-width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
         }
     }
     &__title {
         text-align: left;
-        @include r($r-l) {
-            text-align: center;
-        }
     }
     &__text {
         max-width: 70%;
         line-height: 1.9;
         margin-bottom: 50px;
-        @include r($r-l) {
-            margin: 0 auto;
-            margin-bottom: 30px;
+        @include r($r-xl) {
+            margin-bottom: 45px;
+        }
+        @include r($r-s) {
+            max-width: 100%;
         }
     }
     &__link {
@@ -397,20 +345,18 @@
         position: relative;
         margin-right: 30px;
         margin-bottom: 100px;
+        width: calc((100% / 2) - 30px);
         @include r($r-s) {
+            width: 250px;
             margin-right: 15px;
-            margin-bottom: 90px;
-            box-shadow: 0 0 15px 5px $gray-450;
+            margin-bottom: 50px;
         }
     }
+}
+
+.team-card {
     &__img {
-        width: 370px;
-        height: 320px;
         object-fit: cover;
-        @include r($r-xl) {
-            width: 270px;
-            height: 270px;
-        }
     }
     &__btn {
         position: relative;
@@ -445,23 +391,19 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        width: 326px;
+        width: 90%;
         padding: 24px 23px;
         background-color: $white;
         bottom: -55px;
         left: -1px;
         @include r($r-xl) {
-            width: 101%;
+            width: 95%;
+            padding: 10px 5px;
         }
         @include r($r-s) {
             padding: 5px;
-            box-shadow: 0px 12px 15px 5px $gray-450;
+            bottom: -25px;
         }
-    }
-    &__information {
-        width: 135px;
-        display: inline-block;
-        vertical-align: middle;
     }
     &__name {
         color: $blue-700;
