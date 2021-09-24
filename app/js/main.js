@@ -5,15 +5,13 @@ $(function() {
         prefix: "$",
         step = '0.01',
         value = '0.00',
-
         prettify_separator: ","
 
     })
 
-    $(".furniture__stars").rateYo({
-        rating: 3.6,
+    $(".card__stars").rateYo({
         readOnly: true,
-        starWidth: "18px",
+        starWidth: "15px",
         normalFill: "#d6d6d6",
         ratedFill: "#ffcc00"
     });
@@ -56,17 +54,33 @@ $(function() {
     });
 
     /* КНОПКИ СМЕНЫ ПРЕДСТАВЛЕНИЯ ТОВАРОВ */
-
     $('.sorting__btn--grid').on('click', function() {
         $('.grid').addClass('grid--active')
-        $('.list').removeClass('list--active');
+        $('.grid__card').removeClass('grid__card--list');
+        $('.grid-card').removeClass('grid-card--list')
+        $('.grid-card__body').removeClass('grid-card__body--list')
+        $('.card__info').removeClass('card__info--list')
+        $('.grid-card__img').removeClass('grid-card__img--list')
+        $('.grid-card__text').removeClass('grid-card__text--list')
+        $('.grid-card__stars').removeClass('grid-card__stars--list')
+        $('.grid-card__discription').removeClass('grid-card__discription--list')
+        $('.grid-card__tool').removeClass('grid-card__tool--list')
+        $('.buttons').removeClass('buttons--list')
+
     });
     $('.sorting__btn--line').on('click', function() {
-        $('.list').addClass('list--active')
         $('.grid').removeClass('grid--active');
+        $('.grid__card').addClass('grid__card--list')
+        $('.grid-card').addClass('grid-card--list')
+        $('.grid-card__body').addClass('grid-card__body--list')
+        $('.card__info').addClass('card__info--list')
+        $('.grid-card__img').addClass('grid-card__img--list')
+        $('.grid-card__text').addClass('grid-card__text--list')
+        $('.grid-card__stars').addClass('grid-card__stars--list')
+        $('.grid-card__discription').addClass('grid-card__discription--list')
+        $('.grid-card__tool').addClass('grid-card__tool--list')
+        $('.buttons').addClass('buttons--list')
     });
-
-
 
     $(".menu a").on("click", function(event) {
         //отменяем стандартную обработку нажатия по ссылке
@@ -139,11 +153,4 @@ $(function() {
 
     var mixer1 = mixitup(containerEl1, config);
     var mixer2 = mixitup(containerEl2, config);
-
-
-
-
-
-
-
 });

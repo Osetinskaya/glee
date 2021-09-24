@@ -14,322 +14,144 @@
             </button>
             <div class="shop__inner">
 
-                <aside class="filters">
-                    <div class="category">
-                        <h2 class="category__title heading">Category</h2>
-                        <ul class="category__list">
-                            <li class="category__item">
-                                <a class="category__link" href="#">Chair</a>
-                            </li>
-                            <li class="category__item">
-                                <a class="category__link" href="#">Table</a>
-                            </li>
-                            <li class="category__item">
-                                <a class="category__link" href="#">Lamp</a>
-                            </li>
-                            <li class="category__item">
-                                <a class="category__link" href="#">Watch</a>
-                            </li>
-                            <li class="category__item">
-                                <a class="category__link" href="#">Clock</a>
-                            </li>
-                        </ul>
-                    </div>
+                <section class="filters">
+                    <span class="sr-only">Filters</span>@@include('../components/catalog/_category.html')
                     <div class="price">
-                        <h2 class="price__title heading">price</h2>
+                        <h3 class="price__title heading">price</h3>
                         <div class="price__roller">
-                            <input class="price__input" type="text" data-min="0" data-max="500" data-from="150" data-to="350">
+                            <input class="price__input" type="text" data-min="0" data-max="500" data-from="150" data-to="350" id="price" form="price">
+                            <label class="price__text" for="price"> price intervals</label>
                         </div>
                     </div>
                     <div class="brand">
-                        <h2 class="brand__title heading">Brand</h2>
+                        <h3 class="brand__title heading">Brand</h3>
                         <ul class="brand__list">
-                            <li class="brand__item">
-                                <a class="brand__link" href="#">RFL</a>
+                            <li class="brand__item ">
+                                <div class="brand__name">
+                                    <input class="brand__input filters__input" id="RFL" type="checkbox" name="RFL" value="RFL">
+                                    <label class="brand__label filters__label" for="RFL">RFL</label>
+                                </div>
                                 <span class="brand__number">(10)</span>
                             </li>
-                            <li class="brand__item">
-                                <a class="brand__link" href="#">Brothers</a>
+                            <li class="brand__item ">
+                                <div class="brand__name">
+                                    <input class="brand__input filters__input" id="Brothers" type="checkbox" name="Brothers" value="Brothers">
+                                    <label class="brand__label filters__label" for="Brothers">Brothers</label>
+                                </div>
                                 <span class="brand__number">(21)</span>
                             </li>
-                            <li class="brand__item">
-                                <a class="brand__link" href="#">Regal</a>
+                            <li class="brand__item ">
+                                <div class="brand__name">
+                                    <input class="brand__input filters__input" id="Regal" type="checkbox" name="Regal" value="Regal">
+                                    <label class="brand__label filters__label" for="Regal">Regal</label>
+                                </div>
                                 <span class="brand__number">(3)</span>
                             </li>
-                            <li class="brand__item">
-                                <a class="brand__link" href="#">Nadia</a>
+                            <li class="brand__item ">
+                                <div class="brand__name">
+                                    <input class="brand__input filters__input" id="Nadia" type="checkbox" name="Nadia" value="Nadia">
+                                    <label class="brand__label filters__label" for="Nadia">Nadia</label>
+                                </div>
                                 <span class="brand__number">(14)</span>
                             </li>
-                            <li class="brand__item">
-                                <a class="brand__link" href="#">Otobi</a>
+                            <li class="brand__item ">
+                                <div class="brand__name">
+                                    <input class="brand__input filters__input" id="Otobi" type="checkbox" name="Otobi" value="Otobi">
+                                    <label class="brand__label filters__label" for="Otobi">Otobi</label>
+                                </div>
                                 <span class="brand__number">(6)</span>
                             </li>
                         </ul>
                     </div>
                     <div class="recent">
-                        <h2 class="recent__title heading">Recent product</h2>
+                        <h3 class="recent__title heading">Recent product</h3>
                         <ul class="recent__list">
                             <li class="recent__item">
-                                <div class="recent__photo">
-                                    <img loading="lazy" class="list__img" width="70" height="70" src="images/products/1.png" alt="armchair">
-                                </div>
-                                <div class="recent__info">
-                                    <h2 class="recent__name">
-                                        Wooden radio
-                                    </h2>
-                                    <div class="recent__stars" data-rateyo-rating="4"></div>
-                                    <div class="recent__cost furniture__cost">
-                                        <div class="recent__price">23</div>
-                                        <span class="recent__value">$</span>
-                                    </div>
-                                </div>
+                                @@include('../components/catalog/_recent-card.html',{ "way":"images/products/1.png","name":"Wooden radio", "cost":"23"})
                             </li>
                             <li class="recent__item">
-                                <div class="recent__photo">
-                                    <img loading="lazy" class="list__img" width="70" height="70" src="images/products/2.png" alt="armchair">
-                                </div>
-                                <div class="recent__info">
-                                    <h2 class="recent__name">
-                                        Wooden radio
-                                    </h2>
-                                    <div class="recent__stars" data-rateyo-rating="4"></div>
-                                    <div class="recent__cost furniture__cost">
-                                        <div class="recent__price">23</div>
-                                        <span class="recent__value">$</span>
-                                    </div>
-                                </div>
+                                @@include('../components/catalog/_recent-card.html',{ "way":"images/products/2.png","name":"Wooden radio", "cost":"23"})
                             </li>
                             <li class="recent__item">
-                                <div class="recent__photo">
-                                    <img loading="lazy" class="list__img" width="70" height="70" src="images/products/3.png" alt="armchair">
-                                </div>
-                                <div class="recent__info">
-                                    <h2 class="recent__name">
-                                        Wooden radio
-                                    </h2>
-                                    <div class="recent__stars" data-rateyo-rating="4"></div>
-                                    <div class="recent__cost furniture__cost">
-                                        <div class="recent__price">23</div>
-                                        <span class="recent__value">$</span>
-                                    </div>
-                                </div>
+                                @@include('../components/catalog/_recent-card.html',{ "way":"images/products/3.png","name":"Wooden radio", "cost":"23"})
                             </li>
                         </ul>
-
                     </div>
-                </aside>
+                </section>
 
-                <div class="catalog">
+                <div class="shop__content">
 
                     <div class="sorting">
-                        <div class="sorting view">
-                            <h2 class="sorting__title">View</h2>
-                            <ul class="sorting__list">
-                                <li class="sorting__item">
-                                    <button class="sorting__btn sorting__btn--grid" id="grid">
-                                    <svg class="sorting__svg">
-                                        <use xlink:href="images/sprite.svg#products__grid"></use>
-                                    </svg>
-                                    <span class="sr-only">View like grid </span>
-                                </button></li>
-                                <li class="sorting__item">
-                                    <button class="sorting__btn sorting__btn--line" id="line">
+                        <span class="sr-only">Products list</span>
+
+                        <h2 class="sorting__title">View</h2>
+                        <ul class="sorting__list">
+                            <li class="sorting__item">
+                                <button class="sorting__btn sorting__btn--grid" id="grid">
+                                        <svg class="sorting__svg">
+                                            <use xlink:href="images/sprite.svg#products__grid"></use>
+                                        </svg>
+                                        <span class="sr-only">View like grid</span>
+                                    </button></li>
+                            <li class="sorting__item">
+                                <button class="sorting__btn sorting__btn--line" id="line">
                                         <svg class="sorting__svg">
                                             <use xlink:href="images/sprite.svg#line"></use>
                                         </svg>
                                         <span class="sr-only">View like line</span>
                                     </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="sorting__show">
-                            <select class="sorting__sort">
-                            <option class="sorting__down" value="">Sort By Default</option>
-                            <option class="sorting__down" value="">2</option>
-                            <option class="sorting__down" value="">3</option>
-                            <option class="sorting__down" value="">4</option>
-                        </select>
-                            <select class="sorting__num">
-                            <option class="sorting__down" value="">Show 6</option>
-                            <option class="sorting__down" value="">1</option>
-                            <option class="sorting__down" value="">1</option>
-                            <option class="sorting__down" value="">1</option>
-                        </select>
-                        </div>
-                    </div>
-
-                    <div class="grid grid--active">
-                        @@include('../components/main/_grid-card.html')
-                    </div>
-
-                    <ul class="list">
-                        <li class="list__item">
-                            <div class="list__photo">
-                                <img loading="lazy" class="list__img" width="277" height="260" src="images/products/1.png" alt="armchair">
-                            </div>
-                            <div class="furniture">
-                                <h2 class="furniture__name">
-                                    Wooden radio
-                                </h2>
-                                <div class="furniture__stars " data-rateyo-rating="4.5"></div>
-                                <div class="furniture__cost">
-                                    <div class="furniture__price">23</div>
-                                    <span class="furniture__value">$</span>
-                                </div>
-                                <div class="furniture__discription">
-                                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    </p>
-                                </div>
-                                <div class="buttons">
-                                    <button class="buttons__add footer__btn">add to card</button>
-                                    <div class="buttons__append">
-                                        <button class="buttons__card">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#cart"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to Shopping Cart</span>
-                                        </button>
-                                        <button class="buttons__like">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#favourites"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to favourites</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list__item">
-                            <div class="list__photo">
-                                <img loading="lazy" class="list__img list__img--little" width="277" height="260" src="images/products/2.png" alt="chair">
-                            </div>
-                            <div class="furniture">
-                                <h2 class="furniture__name">
-                                    Wooden chair
-                                </h2>
-                                <div class="furniture__stars " data-rateyo-rating="4.5"></div>
-                                <div class="furniture__cost">
-                                    <div class="furniture__price">23</div>
-                                    <span class="furniture__value">$</span>
-                                </div>
-                                <div class="furniture__discription">
-                                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    </p>
-                                </div>
-                                <div class="buttons">
-                                    <button class="buttons__add footer__btn">add to card</button>
-                                    <div class="buttons__append">
-                                        <button class="buttons__card">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#cart"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to Shopping Cart</span>
-                                        </button>
-                                        <button class="buttons__like">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#favourites"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to favourites</span>
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="list__item">
-                            <div class="list__photo">
-                                <img loading="lazy" class="list__img" width="277" height="260" src="images/products/3.png" alt="lamp">
-                            </div>
-                            <div class="furniture">
-                                <h2 class="furniture__name">
-                                    Pendant lamp
-                                </h2>
-                                <div class="furniture__stars " data-rateyo-rating="4.5"></div>
-                                <div class="furniture__cost">
-                                    <div class="furniture__price">23</div>
-                                    <span class="furniture__value">$</span>
-                                </div>
-                                <div class="furniture__discription">
-                                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    </p>
-                                </div>
-                                <div class="buttons">
-                                    <button class="buttons__add footer__btn">add to card</button>
-                                    <div class="buttons__append">
-                                        <button class="buttons__card">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#cart"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to Shopping Cart</span>
-                                        </button>
-                                        <button class="buttons__like">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#favourites"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to favourites</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list__item">
-                            <div class="list__photo">
-                                <img loading="lazy" class="list__img list__img--little" width="277" height="260" src="images/products/4.png" alt="armchair">
-                            </div>
-                            <div class="furniture">
-                                <h2 class="furniture__name">
-                                    Retro table
-                                </h2>
-                                <div class="furniture__stars " data-rateyo-rating="4.5"></div>
-                                <div class="furniture__cost">
-                                    <div class="furniture__price">23</div>
-                                    <span class="furniture__value">$</span>
-                                </div>
-                                <div class="furniture__discription">
-                                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    </p>
-                                </div>
-                                <div class="buttons">
-                                    <button class="buttons__add footer__btn">add to card</button>
-                                    <div class="buttons__append">
-                                        <button class="buttons__card">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#cart"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to Shopping Cart</span>
-                                        </button>
-                                        <button class="buttons__like">
-                                            <svg class="buttons__icon">
-                                                <use xlink:href="images/sprite.svg#favourites"></use>
-                                            </svg>
-                                            <span class="sr-only">Add to favourites</span>
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                    <div class="pagination">
-                        <ul class="pagination__list">
-                            <li class="pagination__items">
-                                <a class="pagination__link pagination__link" href="#">1</a>
-                            </li>
-                            <li class="pagination__items">
-                                <a class="pagination__link" href="#">2</a>
-                            </li>
-                            <li class="pagination__items">
-                                <a class="pagination__link" href="#">3</a>
                             </li>
                         </ul>
-                        <a class="pagination__next pagination__link" href="#">next</a>
                     </div>
 
+
+                    <div class="catalog">
+                        <section class="grid grid--active">
+                            <ul class="grid__content">
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/2.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/1.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/6.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/8.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/4.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/2.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/1.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/3.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                                <li class="grid__card">
+                                    @@include('../components/catalog/_grid-card.html', { "name": "Wooden chair", "price": "29","way":"../images/products/7.png", "info":"Lorem ipsum dolor sit amet consectetur adipisicing. Illum harum quod, eius sit similique dictaxercitationem?"} )
+
+                                </li>
+                            </ul>
+
+                        </section>
+                        @@include('../components/main/_pagination.html')
+                    </div>
                 </div>
             </div>
+        </div>
 
 
         </div>
