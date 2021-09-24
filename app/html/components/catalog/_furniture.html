@@ -1,0 +1,30 @@
+<div class="furniture">
+    <h2 class="furniture__name">
+        @@name
+    </h2>
+    <div class="furniture__stars " data-rateyo-rating="4.5"></div>
+    <div class="furniture__cost">
+        <div class="furniture__price">@@cost</div>
+        <span class="furniture__value">$</span>
+    </div>
+    <div class="furniture__discription">
+        <p>@@info</p>
+    </div>
+    <div class="buttons">
+        <button class="buttons__add footer__btn">add to card</button>
+        <div class="buttons__append">
+            <button class="buttons__card">
+                <svg class="buttons__icon">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                </svg>
+                <span class="sr-only">Add to Shopping Cart</span>
+            </button>
+            <button class="buttons__like">
+                <svg class="buttons__icon">
+                    <use xlink:href="images/sprite.svg#favourites"></use>
+                </svg>
+                <span class="sr-only">Add to favourites</span>
+            </button>
+        </div>
+    </div>
+</div>

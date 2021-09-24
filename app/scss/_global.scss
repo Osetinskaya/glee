@@ -79,7 +79,7 @@ body {
 }
 
 .top {
-    margin: 130px 0 115px;
+    margin: 130px 0 112px;
     background-color: $blue-150;
     width: 100%;
     padding: 30px 0 36px;
@@ -118,6 +118,41 @@ body {
                 position: absolute;
                 right: -12px;
             }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__item {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    &__link {
+        padding: 12px 20px;
+        color: $blue-200;
+        border: 1px solid $blue-200;
+        transition: background-color 0.5s;
+        &--active &:hover:not(.active) {
+            background-color: $blue-400;
+            color: $white;
+        }
+        &:hover {
+            background-color: $blue-200;
+            color: $white;
+        }
+        &:active {
+            background-color: $blue-350;
+            color: $white;
+        }
+        &:focus {
+            background-color: $blue-300;
+            color: $white;
+        }
+        &--next {
+            padding: 7px 20px;
         }
     }
 }

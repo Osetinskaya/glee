@@ -1,283 +1,41 @@
-<!DOCTYPE html>
-<html lang="eng">
+@@include('../components/_head.html') @@include('../components/_header.html')
+<main>
+    <h1 class="sr-only">Information about company</h1>
+    @@include('../components/_breadcrumbs.html',{ "breadcrumbs": "Blog" })
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Glee</title>
-    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-    <header class="header">
+    <section class="blog">
         <div class="container">
-            <div class="header__inner">
-                <nav class="menu">
-                    <a class="logo header__logo" href="#">
-                        <img loading="lazy" class="logo__img" width="145" height="40" src="images/logo.png" alt="logo">
-                    </a>
-                    <button class="menu__btn">
-                        <svg>
-                            <use xlink:href="images/sprite.svg#menu__btn"></use>
-                        </svg>
-                        <span class="sr-only">Open menu</span>
-                    </button>
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="Log__in.html">Home</a>
-                            <span class="menu__link-down">+</span>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="about.html">About</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Services</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Pages</a>
-                            <span class="menu__link-down">+</span>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">News</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="icons">
-                        <button class="icons__link icons__link--search">
-                            <svg class="icons__svg">
-                                <use xlink:href="images/sprite.svg#products__search"></use>
-                            </svg>
-                            <span class="sr-only">Search by page</span>
-                        </button>
-                        <button class="icons__link icons__link--like">
-                                <svg class="icons__svg icons__svg--purchase">
-                                    <use xlink:href="images/sprite.svg#products__like"></use>
-                                </svg>
-                                <span class="sr-only">Favorite products</span>
-                                <span class="icons__num">0</span>
-                            </button>
-                        <button class="icons__link icons__link--card">
-                                <svg class="icons__svg icons__svg--purchase">
-                                    <use xlink:href="images/sprite.svg#products__card"></use>
-                                </svg>
-                                <span class="sr-only">basket of goods</span>
-                                <span class="icons__num">0</span>
-                            </button>
+            <ul class="blog__list">
+                <li class="blog__item">
 
-                        <button class="icons__link icons__link--grid">
-                            <svg class="icons__svg">
-                                <use xlink:href="images/sprite.svg#products__grid"></use>
-                            </svg>
-                            <span class="sr-only">Available applications</span>
-                        </button>
-                    </div>
-                </nav>
-            </div>
+
+
+                    @@include('../components/blog/_blog-card.html',{ "way":"../images/blog/blog_1.jpg","name":"Fonsectetur adipisicing eiusmod","blog":"aspernatur id ipsa. Earum sint ducimus neque impedit quos soluta incidunt ab rerum quod fuga.", "blog": "Temporibus autem"})
+                    <button class="blog__item-btn">View More</button>
+                    <button class="blog__item-btn blog__item-btn--close">Close</button>
+                </li>
+                <li class="blog__item">
+
+                </li>
+                <li class="blog__item">
+
+                </li>
+                <li class="blog__item">
+
+                </li>
+
+            </ul>
         </div>
-    </header>
-    <main>
-        <h1 class="sr-only">Information about company</h1>
-        @@include('../components/_breadcrumbs.html',{ "breadcrumbs": "blog" })
-
-        <section class="blog">
-            <div class="container">
-                <ul class="blog__list">
-                    <li class="blog__card">
-                        <img class="blog__img" loading="lazy" width="830" height="500" src="images/blog/blog_1.jpg" alt="interior">
-                        <div class="blog__info">
-                            <time class="blog__admin--calendar">28 january. 2020</time>
-                            <span class="blog__admin">by admin</span>
-                        </div>
-                        <h2 class="blog__title">Fonsectetur adipisicing eiusmod </h2>
-                        <div class="blog__text">
-                            <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem numquam nisi consequatur laudantium possimus minus.</p>
-                        </div>
-                        <a class="blog__link" href="#"> View more</a>
-                    </li>
-                    <li class="blog__card">
-                        <img class="blog__img" loading="lazy" width="830" height="500" src="images/blog/blog_2.jpg" alt="interior">
-                        <div class="blog__info">
-                            <time class="blog__admin--calendar">28 january. 2020</time>
-                            <span class="blog__admin">by admin</span>
-                        </div>
-                        <h2 class="blog__title">Fonsectetur adipisicing elit,</h2>
-                        <div class="blog__text">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio facere vero! Similique sed amet aut et! Debitis maxime vitae fugit vel, corrupti sint dignissimos in repellat veniam animi ipsum.</p>
-                        </div>
-                        <a class="blog__link" href="#"> View more</a>
-                    </li>
-                    <li class="blog__card">
-                        <img class="blog__img" loading="lazy" width="830" height="500" src="images/blog/blog_3.jpg" alt="interior">
-                        <div class="blog__info">
-                            <time class="blog__admin--calendar">28 january. 2020</time>
-                            <span class="blog__admin">by admin</span>
-                        </div>
-                        <h2 class="blog__title">Fsectetur adipisicing tempor incididunt \</h2>
-                        <div class="blog__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rem excepturi ipsa voluptatum, modi laudantium expedita reprehenderit quibusdam repudiandae reiciendis totam repellat nemo magni adipisci, saepe accusamus nobis
-                                porro et.</p>
-                        </div>
-                        <a class="blog__link" href="#"> View more</a>
-                    </li>
-                    <li class="blog__card">
-                        <img class="blog__img" loading="lazy" width="830" height="500" src="images/blog/blog_4.jpg" alt="interior">
-                        <div class="blog__info">
-                            <time class="blog__admin--calendar">28 january. 2020</time>
-                            <span class="blog__admin">by admin</span>
-                        </div>
-                        <h2 class="blog__title">Vonsectetur adipisicing elit</h2>
-                        <div class="blog__text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur sapiente explicabo tempore dolores quod! Ullam, alias beatae provident deserunt error tempore labore officiis. Molestiae doloremque provident nulla
-                                eius minus.</p>
-                        </div>
-                        <a class="blog__link" href="#"> View more</a>
-                    </li>
-
-
-
-                </ul>
-            </div>
-        </section>
-
-
-        <div class="sponsors">
-            <div class="container container--sm">
-                <ul class="sponsors__list">
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/1.png" alt="peterson__stephanie">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/2.png" alt="kmn_consulting">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/3.png" alt="chainforse">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/4.png" alt="nextg3n">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/5.png" alt="vintage">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/1.png" alt="peterson__stephanie">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/2.png" alt="kmn_consulting">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/3.png" alt="chainforse">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/4.png" alt="nextg3n">
-                    </li>
-                    <li class="sponsors__item">
-                        <img loading="lazy" class="sponsors__img" width="170" height="90" src="images/sponsors/5.png" alt="vintage">
-                    </li>
-                </ul>
-            </div>
+        @@include(../components/main/pagination.html)
+        <div class="right">
+            @@include('../components/catalog/_category.html')
         </div>
-
-    </main>
-
-    <footer class="footer">
-        <div class="container container--sm">
-            <div class="footer__inner">
-                <div class="footer-address">
-                    <h3 class="sr-only">Contact Information</h3>
-                    <a class="logo footer__logo" href="#">
-                        <img loading="lazy" class="logo__img footer__logo" width="145px" height="40px" src="images/logo.png" alt="logo">
-                    </a>
-                    <address class="footer__address">
-                        <a class="footer__contacts" href="#">ADDRESS: 4772 Wines Lane Houston, TX 77032</a>
-                        <a class="footer__contacts" href="tel:8323475843">TELEPHONE: +832-347-5843 </a>
-                        <a class="footer__contacts" href="mailto:contact@Glee.com">EMAIL: contact@Glee.com</a>
-                    </address>
-                </div>
-                <div class="footer__nav">
-                    <div class="footer__package--services">
-                        <p class="footer__title">Services</p>
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a class="footer__link" href="#">About us</a>
-                            </li>
-                            <li class="footer__item">
-                                <a class="footer__link" href="#">Return Policy</a>
-                            </li>
-                            <li class="footer__item">
-                                <a class="footer__link" href="#">Our Blog</a>
-                            </li>
-                            <li class="footer__item">
-                                <a class="footer__link" href="#">Contact Us</a>
-                            </li>
-                            <li class="footer__item">
-                                <a class="footer__link" href="#">Terms & Condition</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__package">
-                        <ul class="footer__list">
-                            <p class="footer__title">Account</p>
-                            <ul class="footer__list">
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#">Your Account</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#">Checkout</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#">Login</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#">Register</a>
-                                </li>
-                            </ul>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="footer__block">
-                    <p class="footer__title">newsletter</p>
-                    <p class="footer__text">
-                        Subscribe by our newsletter and get update protidin.
-                    </p>
-                    <form action="#" class="footer__form">
-                        <label for="address" class="footer__label">
-                            <span class="sr-only">email address</span>
-                        </label>
-                        <input class="footer__input" id="address" type="email" placeholder="Email address" name="email" required>
-                        <button class="footer__btn" type="submit">Subscribe
-                        </button>
-
-                    </form>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="footer__bottom-copy">©2020 CopyRight Example. All rights reserved. </p>
-                <ul class="footer__bottom-navigation">
-                    <li class="footer__bottom-nav">
-                        <a class="footer__bottom-link" href="#">Home</a>
-                    </li>
-                    <li class="footer__bottom-nav">
-                        <a class="footer__bottom-link" href="#">About</a>
-                    </li>
-                    <li class="footer__bottom-nav">
-                        <a class="footer__bottom-link" href="#">Blog</a>
-                    </li>
-                    <li class="footer__bottom-nav">
-                        <a class="footer__bottom-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    </section>
 
 
+    @@include('../components/main/_sponsors.html')
+
+</main>
 
 
-    <script src="js/main.min.js"></script>
-</body>
-
-</html>
+@@include('../components/_footer.html') @@include('../components/_footer-scripts.html')
